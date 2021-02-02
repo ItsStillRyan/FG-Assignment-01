@@ -1,0 +1,30 @@
+/* backgrounds */
+body{
+    background-image: url(../Images/main-BG.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center bottom;
+    
+}
+
+
+/* MAIN MENU PAGE */
+
+
+.main-logo{
+    width: 90%;
+}
+
+
+
+.showcol{
+    border: 2px solid black
+}
+
+
+
+.PHbutton{
+}
+
+/* MAIN MENU PAGE END*/
