@@ -1,30 +1,15 @@
 /* backgrounds */
 body{
-    background-image: url(../Images/main-BG.jpg);
+    background-image: url(../../Images/gameplay-BG.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    background-position: center bottom;
-    
+    background-position: center ;
+
 }
 
 
-/* MAIN MENU PAGE */
-
-
-.main-logo{
-    width: 90%;
+.boxbor{
+    border: 2px solid black;
+    height: 140px;
 }
-
-
-
-.showcol{
-    border: 2px solid black
-}
-
-
-
-.PHbutton{
-}
-
-/* MAIN MENU PAGE END*/
