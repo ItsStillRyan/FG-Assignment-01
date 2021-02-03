@@ -1,30 +1,43 @@
+/* @media (min-width: 400px) and (max-width: 750px){ */
+
 /* backgrounds */
 body{
-    background-image: url(../Images/main-BG.jpg);
+    background-image: url(../../Images/main-BG.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
     background-position: center bottom;
-    
+    back
 }
 
 
 /* MAIN MENU PAGE */
 
 
-.main-logo{
-    width: 90%;
+/* to change in other screens */
+.main-logo img{
+   width: 40vh;
 }
 
+.main-logo{
+   margin-top: 15vh;
+}
 
 
 .showcol{
-    border: 2px solid black
+    border: 2px solid black;
 }
 
 
-
-.PHbutton{
+/* to change in other screens */
+.main-buttons{ 
+    margin-top: 40vh;
 }
 
+#mBTN{
+    margin: 10px;
+   
+}
 /* MAIN MENU PAGE END*/
+
+}
