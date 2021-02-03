@@ -5,11 +5,108 @@ body{
     background-size: cover;
     background-attachment: fixed;
     background-position: center ;
-
+    max-width: 1024px;
+    margin: auto;
 }
 
-
-.boxbor{
+/* .boxbor{
     border: 2px solid black;
-    height: 140px;
+} */
+
+.count-and-pause{
+
 }
+
+#countdown{
+    font-size: 4em;
+}
+
+/* cycle through all @media to optimal height */
+
+
+.equation{
+
+}
+
+#equation-line{
+    font-size:2em;
+    color: white;
+}
+
+
+.button-options{
+    width: 130px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* ---------------------------------------- */
+/* mobile phone */
+@media (min-width: 375px){
+.geoff-sprite{
+    margin-top: 35vh;
+}
+.button-options{
+    width: 130px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+}
+
+/* ---------------------------------------- */
+@media (min-width: 414px){
+.geoff-sprite{
+    margin-top: 37vh;
+}
+
+
+.button-options{
+    width: 170px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+}
+/* ---------------------------------------- */
+@media (min-width: 414px) and (min-height: 896px){
+.geoff-sprite{
+    margin-top: 41vh;
+}
+.choicesBTN{
+    margin-top:2vh;
+}
+.button-options{
+    width: 170px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+}
+/* ---------------------------------------- */
+/* tablet */
+@media (min-width: 768px){
+.geoff-sprite{
+    margin-top: 44vh;
+
+}
+.button-options{
+    width: 220px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+}
+
+/* ---------------------------------------- */
+/* Desktop */
+@media (min-width: 1440px){
+.geoff-sprite{
+    margin-top: 41vh;
+
+}
+}
+
+@media (min-width: 1920px){
+.geoff-sprite{
+    margin-top: 45vh;
+
+}
+}
+
