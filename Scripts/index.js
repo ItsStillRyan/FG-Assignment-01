@@ -1,8 +1,14 @@
 //call button
 document.querySelector('#playBTN').addEventListener('click', function(){
 
-    document.querySelector('.main-menu-screen').style.display = "none"
-    document.querySelector('.math-op-screen').style.display = "block"
+    //menu page
+    document.querySelector('.main-menu-screen').style.cssText = `display: none;`
+
+
+
+    //math op screen
+    document.querySelector('.math-op-screen').style.cssText =  
+    `display: block;`
 })
 
 
