@@ -9,10 +9,13 @@ body{
     margin: auto;
 }
 
-/* .boxbor{
+.boxbor{
     border: 2px solid black;
-} */
+}
 
+.geoff-sprite{
+    margin-top: 35vh;
+}
 .count-and-pause{
 
 }
@@ -39,7 +42,7 @@ body{
     margin-top: 10px;
     margin-bottom: 10px;
 }
-
+/* 
 /* ---------------------------------------- */
 /* mobile phone */
 @media (min-width: 375px){
@@ -109,4 +112,4 @@ body{
 
 }
 }
-
+ */

@@ -1,4 +1,3 @@
-/* @media (min-width: 400px) and (max-width: 750px){ */
 
 /* backgrounds */
 body{
@@ -7,18 +6,15 @@ body{
     background-size: cover;
     background-attachment: fixed;
     background-position: center bottom;
-    back
 }
-
-
-/* MAIN MENU PAGE */
-/* .main-menu{
-    display:none;
-} */
-
+.main-menu-screen{
+    display: none;
+}
 .showcol{
     border: 2px solid black;
 }
+
+
 
 /* to change in other screens */
 .main-logo img{
@@ -37,12 +33,20 @@ body{
     margin: 10px;
    
 }
-/* MAIN MENU PAGE END*/
-
-}   
+/* MAIN MENU PAGE END*/ 
 
 /* MATH OPERATORS */
 
-.main-logo1 img{
-   width: 2vh;
+.math-op-screen{
+    width:100%;
+    height:100%;
+    text-align:center;
+    overflow:hidden;
+}
+
+.math-op-screen img{
+    min-width:100vh;
+    max-width:none;
+    height:100vh;
+    margin: 0 -100px;
 }
