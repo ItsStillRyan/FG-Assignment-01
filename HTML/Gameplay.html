@@ -5,34 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-    <link rel="stylesheet" href="../CSS/Gameplay-css/Desktop-resp.css">
-    <link rel="stylesheet" href="../CSS/Gameplay-css/Tablet-resp.css">
     <link rel="stylesheet" href="../CSS/Gameplay-css/Mobile-resp.css">
 </head>
 <body>
 
-<div class="container">
-    <div class="row">
-        <div class="col-lg boxbor"><button>pause</button></div>
-        <div class="col-lg boxbor">box</div>
-        <div class="col-lg boxbor">box</div>
-        <div class="col-lg boxbor">box</div>
 
-        <!-- geoff in here -->
-        <div class="col-lg boxbor">
-            <img src="../Images/geoff-small.png" alt="">
+    <div class="count-and-pause">
+        <div class="row">
+            <div class="col boxbor"></div>
+                <div class="col boxbor text-center" id="countdown">
+                    <p>60</p>
+                </div>
+            <div class="col boxbor"></div>
+        </div>
+    </div>
+
+    <div class="geoff-sprite">
+        <div class="row ">
+                <div class="col boxbor text-center">
+                    <img src="../Images/geoff-small.png" alt="">
+                </div>
+            </div>
         </div>
 
-        <div class="col boxbor"><button>num</button></div>
-        <div class="col boxbor"><button>num</button></div>
-        <div class="w-100"></div>
-        <div class="col boxbor"><button>num</button></div>
-        <div class="col boxbor"><button>num</button></div>
+    <div class="equation">
+        <div class="row">
+                <div class="col boxbor text-center"> 
+                    <p id="equation-line">16 x 2 = ? </p>
+                </div>
+            </div>
+        </div>
+
+
+    <div class="choicesBTN">
+        <div class="row">
+            <div class="col boxbor text-center">
+                <img src="../Images/optionsBTN.png" class="button-options" alt="">
+            </div>
+            <div class="col boxbor text-center">
+                <img src="../Images/optionsBTN.png" class="button-options" alt="">
+            </div>
+                <div class="w-100"></div>
+            <div class="col boxbor text-center">
+                <img src="../Images/optionsBTN.png" class="button-options" alt="">
+            </div>
+            <div class="col boxbor text-center">
+                <img src="../Images/optionsBTN.png"  class="button-options"alt="">
+            </div>
+        </div>
     </div>
-</div>
-
-
-
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
 </body>

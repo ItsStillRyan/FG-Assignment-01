@@ -12,7 +12,13 @@ body{
 
 
 /* MAIN MENU PAGE */
+/* .main-menu{
+    display:none;
+} */
 
+.showcol{
+    border: 2px solid black;
+}
 
 /* to change in other screens */
 .main-logo img{
@@ -23,13 +29,6 @@ body{
    margin-top: 15vh;
 }
 
-
-.showcol{
-    border: 2px solid black;
-}
-
-
-/* to change in other screens */
 .main-buttons{ 
     margin-top: 40vh;
 }
@@ -40,4 +39,10 @@ body{
 }
 /* MAIN MENU PAGE END*/
 
+}   
+
+/* MATH OPERATORS */
+
+.main-logo1 img{
+   width: 2vh;
 }
