@@ -5,7 +5,6 @@ body{
     background-size: cover;
     background-attachment: fixed;
     background-position: center ;
-    max-width: 1024px;
     margin: auto;
 }
 
@@ -14,7 +13,7 @@ body{
 }
 
 .geoff-sprite{
-    margin-top: 35vh;
+    
 }
 .count-and-pause{
 
@@ -112,4 +111,4 @@ body{
 
 }
 }
- */
+ 

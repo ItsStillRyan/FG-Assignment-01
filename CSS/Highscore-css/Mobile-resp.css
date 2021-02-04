@@ -1,6 +1,6 @@
 /* backgrounds */
 body{
-    background-image: url(../Images/main-BG.jpg);
+    background-image: url(../../Images/Menu/main-BG.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -8,23 +8,47 @@ body{
     
 }
 
+.hcbillboard{
+    text-align: center;
+}
 
-/* MAIN MENU PAGE */
+.hcbillboard img{
+    height: 70vh;
+    width: auto;
+    margin-top: 10vh;
+}
 
-
-.main-logo{
-    width: 90%;
+.hcBackBtn{
+ padding: 0;
+ 
+}
+.backBtn img{
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
 }
 
 
-
-.showcol{
-    border: 2px solid black
+/* RESPONSIVEEEEEEE */
+@media (min-width: 375px){
+    .hcbillboard img{
+    height: 50vh;
+    width: auto;
+    margin-top: 10vh;
 }
 
-
-
-.PHbutton{
+@media (min-width: 411px){
+    .hcbillboard img{
+    height: 50vh;
+    width: auto;
+    margin-top: 10vh;
+}
 }
 
-/* MAIN MENU PAGE END*/
+@media (min-width: 767px){
+    .hcbillboard img{
+    height:70vh;
+    width: auto;
+    margin-top: 10vh;
+}
+}
