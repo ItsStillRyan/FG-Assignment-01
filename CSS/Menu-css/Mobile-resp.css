@@ -1,43 +1,28 @@
-
-/* backgrounds */
 body{
     background-image: url(../../Images/Menu/main-BG.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
     background-position: center bottom;
-
 }
 .main-menu-screen{
     display: block;
-
 }
 .showcol{
     border: 2px solid black;
 } 
-
-
-/* to change in other screens */
-
 .main-logo{
    margin-top: 2vh;
 }   
-
 .main-logo img{
    width: 40vh;
 }
-
-
 .main-buttons{ 
     margin-top: 35vh;
- 
 }
-
 .mBTN{
     margin-top: 15px;
     padding:0;
-    
-   
 }
 /* MAIN MENU PAGE END*/ 
 
@@ -45,14 +30,29 @@ body{
 .settings-screen{
     display: none;
 }
-
 #settingsBTN img{
     height: 65px;
     margin-top: 1vh;
     
 }
+#volBTN img{
+    height: 40px;
+}
 
-/* SETTINGS BUTTON END */
+.music-toggle{
+    margin-top: 40vh;
+}
+.music-toggle p{
+    padding-right:10px;
+}
+.sfx-toggle{
+    margin-top:3vh;
+}
+.sfx-toggle p{
+    padding-right: 25px;
+    padding-left: 10px
+}
+/* SETTINGS PAGE END */
 
 /* MATH OPERATORS */
 .math-op-screen{ 
@@ -63,7 +63,5 @@ body{
 }
 .math-op-screen img{ 
     height:80vh;
-   
 }
-
 /* MATH OPERATORS END */
