@@ -59,11 +59,31 @@ body{
 }
 
 #timesupimg{
-    margin-top: 20vh;
+    margin-top: 10vh;
+}
+/* timesup-screen END*/
+
+/* Gameover-screen */
+
+.gameover-screen{
+    display: none;
+    text-align: center;
+    position: relative;
+}
+
+.gameover-screen img{
+    height: 70vh;
+    width: auto;
+    margin-top: 10vh;
 }
 
 
-/* timesup-screen END*/
+
+
+
+/* Gameover-screen END */
+
+
 
 /* Display swap */
 .main-gameplay{
@@ -72,6 +92,10 @@ body{
 .pause-screen{
     display: none;
 }
+
+
+
+
 
 /* ---------------------------------------- */
 /* Mobile small - 4.7in */
