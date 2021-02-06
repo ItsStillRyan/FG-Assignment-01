@@ -1,10 +1,13 @@
-//Gameplay
-//Settings
-function pauseBG() {
-  document.body.style.backgroundImage = "url('../../Images/Gameplay/pause-BG.jpg')";
+//Background Changer
+let pausescreen = "url('../../Images/Gameplay/pause-BG.jpg')"
+let timesupscreen = "url('../../Images/Gameplay/timesup-BG.jpg')"
+
+function screenChange(BG){
+    document.body.style.backgroundImage = BG
 }
+//Background Changer END
 
-
+//Settings
 document.querySelector('#pauseBtn').addEventListener('click', function()
 {
     document.querySelector('.main-gameplay').style.cssText = `display: none;`
@@ -14,3 +17,16 @@ document.querySelector('#pauseBtn').addEventListener('click', function()
 
     pauseBG()
 })
+//Settings END
+
+//Times up screen
+function timesUpScreen(){
+    screenChange(timesupscreen)
+
+    document.querySelector('.main-gameplay').style.cssText = `display: none;`
+
+}
+
+window.setTimeout(timesUpScreen, 3000)
+
+
