@@ -12,15 +12,15 @@ body{
     display: block;
 
 }
-/* .showcol{
+.showcol{
     border: 2px solid black;
-}  */
+} 
 
 
 /* to change in other screens */
 
 .main-logo{
-   margin-top: 10vh;
+   margin-top: 2vh;
 }   
 
 .main-logo img{
@@ -29,7 +29,7 @@ body{
 
 
 .main-buttons{ 
-    margin-top: 42vh;
+    margin-top: 35vh;
  
 }
 
@@ -41,6 +41,18 @@ body{
 }
 /* MAIN MENU PAGE END*/ 
 
+/* SETTINGS PAGE*/
+.settings-screen{
+    display: none;
+}
+
+#settingsBTN img{
+    height: 65px;
+    margin-top: 1vh;
+    
+}
+
+/* SETTINGS BUTTON END */
 
 /* MATH OPERATORS */
 .math-op-screen{ 
