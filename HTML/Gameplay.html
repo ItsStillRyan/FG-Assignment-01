@@ -12,57 +12,83 @@
 
 <body>
 
+    <div class="main-gameplay">
 
-    <div class="count-and-pause container">
-        <div class="row">
-            <div class="col boxbor"></div>
-            <div class="col boxbor text-center" id="countdown">
-                <p>60</p>
+        <div class="count-and-pause container">
+            <div class="row">
+
+                <div class="col boxbor"></div>
+
+                <div class="col boxbor text-center" id="countdown">
+                    <p>60</p>
+                </div>
+
+                <div class="col boxbor">
+                    <button type="image" class="btn" id="pauseBtn" onclick="pauseBG()">
+                        <img src="../Images/Gameplay/gameplay-Pause.png" alt="">
+                    </button>
+                </div>
+
             </div>
-            <div class="col boxbor"></div>
+        </div>
+
+        <div class="equation container">
+            <div class="row">
+                <div class="col boxbor text-center">
+                    <p id="equation-line">16 x 2 = ? </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="geoff-sprite container">
+            <div class="row ">
+                <div class="col boxbor text-center">
+                    <img src="../Images/Gameplay/geoff-small.png" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="choicesBTN container">
+            <div class="row ">
+                <div class="col boxbor text-center">
+                    <img src="../Images/Gameplay/optionsBTN.png" class="button-options" alt="">
+                </div>
+                <div class="col boxbor text-center">
+                    <img src="../Images/Gameplay/optionsBTN.png" class="button-options" alt="">
+                </div>
+                <div class="w-100"></div>
+                <div class="col boxbor text-center">
+                    <img src="../Images/Gameplay/optionsBTN.png" class="button-options" alt="">
+                </div>
+                <div class="col boxbor text-center">
+                    <img src="../Images/Gameplay/optionsBTN.png" class="button-options" alt="">
+                </div>
+            </div>
         </div>
     </div>
 
-    <div class="equation container">
-        <div class="row">
-            <div class="col boxbor text-center">
-                <p id="equation-line">16 x 2 = ? </p>
-            </div>
-        </div>
-    </div>
+    <div class="pause-screen">
+        
 
-    <div class="geoff-sprite container">
-        <div class="row ">
-            <div class="col boxbor text-center">
-                <img src="../Images/Gameplay/geoff-small.png" alt="">
-            </div>
-        </div>
     </div>
 
 
 
 
-    <div class="choicesBTN container">
-        <div class="row align-items-end">
-            <div class="col boxbor text-center">
-                <img src="../Images/Gameplay/optionsBTN.png" class="button-options" alt="">
-            </div>
-            <div class="col boxbor text-center">
-                <img src="../Images/Gameplay/optionsBTN.png" class="button-options" alt="">
-            </div>
-            <div class="w-100"></div>
-            <div class="col boxbor text-center">
-                <img src="../Images/Gameplay/optionsBTN.png" class="button-options" alt="">
-            </div>
-            <div class="col boxbor text-center">
-                <img src="../Images/Gameplay/optionsBTN.png" class="button-options" alt="">
-            </div>
-        </div>
-    </div>
 
+
+
+
+
+
+
+
+
+    <!-- SCRIPTS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
         crossorigin="anonymous"></script>
+    <script src="../Scripts/Gameplay-Script.js"></script>
 </body>
 
 </html>

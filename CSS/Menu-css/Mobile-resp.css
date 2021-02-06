@@ -47,12 +47,11 @@ body{
     display: none;
     margin: auto;
     text-align: center;
-     margin-top: 10vh;
+    margin-top: 10vh;
 }
 .math-op-screen img{ 
-    height: 80vh;
+    height:80vh;
    
 }
 
 /* MATH OPERATORS END */
-

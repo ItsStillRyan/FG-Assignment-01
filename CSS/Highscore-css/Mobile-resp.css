@@ -4,7 +4,7 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    background-position: center bottom;
+    background-position: center;
     
 }
 
@@ -17,29 +17,22 @@ body{
     width: auto;
     margin-top: 10vh;
 }
-
-.hcBackBtn{
- padding: 0;
  
-}
-.backBtn img{
-    width: 100%;
-    text-align: center;
+.back-button{
     margin-top: 10px;
 }
-
 
 /* RESPONSIVEEEEEEE */
 @media (min-width: 375px){
     .hcbillboard img{
-    height: 50vh;
+    height: 60vh;
     width: auto;
     margin-top: 10vh;
 }
 
 @media (min-width: 411px){
     .hcbillboard img{
-    height: 50vh;
+    height: 60vh;
     width: auto;
     margin-top: 10vh;
 }
