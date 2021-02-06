@@ -22,6 +22,10 @@ body{
     color: white;
 }
 
+.boxbor{
+    border: 2px solid black;
+}
+
 /* PAUSE CSS */
 .pause-screen{
     position: relative;
@@ -32,7 +36,17 @@ body{
     overflow: hidden;
 }
 
+.requ-btn{
+    margin-top: 60vh;
+}
 
+#settingsBtn{
+    float: right;
+}
+#settingsBtn img{
+    height: 55px;
+    margin-top: 10px;
+}
 
 /* PAUSE CSS END*/
 
