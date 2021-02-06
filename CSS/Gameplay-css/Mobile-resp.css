@@ -22,9 +22,9 @@ body{
     color: white;
 }
 
-.boxbor{
+/* .boxbor{
     border: 2px solid black;
-}
+} */
 
 /* univeral CSS END */
 
@@ -68,16 +68,25 @@ body{
 .gameover-screen{
     display: none;
     text-align: center;
-    position: relative;
 }
 
-.gameover-screen img{
-    height: 70vh;
-    width: auto;
-    margin-top: 10vh;
+.score-board{
+    height: 48vh;
+    margin-top: 20vh;
+    margin-left: 2px;
 }
 
+.gmBTN img{
+    height: 55px;
+}
 
+.btn-box{
+    background-image: url(../../Images/Gameplay/Gameover-btnBG.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 80vw;
+    margin-top: 5vh;
+}
 
 
 
@@ -155,6 +164,10 @@ body{
     float:right;
     margin-top:30px;
 }
+
+.btn-box{
+    background-size: 50vw;
+}
 }
 
 /* Ipad pro */
@@ -172,6 +185,10 @@ body{
 #pauseBtn{
     float:right;
     margin-top:30px;
+}
+
+.btn-box{
+    background-size: 50vw;
 }
 }
 
@@ -199,5 +216,10 @@ body{
     width: 270px;
     margin-top: 30px;
     margin-bottom: 10px;
+}
+
+.btn-box{
+    background-size: 20vw;
+    padding: 10px;
 }
 }
