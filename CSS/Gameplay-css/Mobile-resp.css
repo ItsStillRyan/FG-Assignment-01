@@ -52,6 +52,19 @@ body{
 
 /* PAUSE CSS END*/
 
+/* timesup-screen */
+.timesup-screen{
+     display: none;
+     padding: 30px;
+}
+
+#timesupimg{
+    margin-top: 20vh;
+}
+
+
+/* timesup-screen END*/
+
 /* Display swap */
 .main-gameplay{
     display: block;
