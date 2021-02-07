@@ -1,4 +1,5 @@
 let settingsscreen = "url('../../Images/Menu/Settings-BG.jpg')"
+let menuscreen = "url('../../Images/Menu/main-BG.jpg')"
 function screenChange(BG){
     document.body.style.backgroundImage = BG
 }
@@ -15,11 +16,18 @@ document.querySelector('#playBTN').addEventListener('click', function () {
 })
 
 
-//settings button
+//settings transitions 
 document.querySelector('#settingsBTN').addEventListener('click', function(){
     displayToggle('.main-menu-screen', '.settings-screen')
     screenChange(settingsscreen)
 })
 
+document.querySelector('#back-Btn').addEventListener('click', function(){
+    displayToggle('.settings-screen', '.main-menu-screen')
+    screenChange(menuscreen)
+})
 
-
+//highscore transitions
+document.querySelector('#highscoreBTN').addEventListener('click', function(){
+    document.location.href = 'Highscore.html'
+})
