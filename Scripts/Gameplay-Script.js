@@ -31,7 +31,6 @@ document.querySelector('#pauseBtn').addEventListener('click', function()
     pauseBG()
 })
 
-
 //Times up screen
 window.setTimeout(timesUpScreen, 2000)
 //Times Up screen END
@@ -39,3 +38,17 @@ window.setTimeout(timesUpScreen, 2000)
 //Final Score
 window.setTimeout(gameoverScreen, 4000)
 //Final Score END
+
+
+//gameover buttons transitions
+document.querySelector('#replayBTN').addEventListener('click', function(){
+    document.location.href = 'Gameplay.html'
+})
+
+document.querySelector('#highscoreBTN').addEventListener('click', function(){
+    document.location.href = 'Highscore.html'
+})
+
+document.querySelector('#mainmenuBTN').addEventListener('click',function(){
+    document.location.href = 'Menu.html'
+})
