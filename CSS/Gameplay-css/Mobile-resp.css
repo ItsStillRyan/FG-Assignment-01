@@ -1,3 +1,10 @@
+/* fonts */
+@font-face 
+{
+    font-family: FG-FONT; 
+    src: url('../../Additionals/04B_30__.TTF'); 
+}
+
 /* Universal sizes */
 body{
     background-image: url(../../Images/Gameplay/gameplay-BG.jpg);
@@ -13,13 +20,14 @@ body{
     margin-top:10px;
 }
 
-#countdown{
-    font-size: 4em;
-}
-
 #equation-line{
     font-size:2em;
     color: white;
+}
+
+#countdown p{
+    font-family: FG-FONT;
+    font-size: 5em;
 }
 
 /* .boxbor{
