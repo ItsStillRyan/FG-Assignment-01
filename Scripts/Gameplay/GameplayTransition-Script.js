@@ -32,11 +32,11 @@ document.querySelector('#pauseBtn').addEventListener('click', function()
 })
 
 //Times up screen
-window.setTimeout(timesUpScreen, 60000)
+window.setTimeout(timesUpScreen, 65000)
 //Times Up screen END
 
 //Final Score
-window.setTimeout(gameoverScreen, 63000)
+window.setTimeout(gameoverScreen, 68000)
 //Final Score END
 
 
