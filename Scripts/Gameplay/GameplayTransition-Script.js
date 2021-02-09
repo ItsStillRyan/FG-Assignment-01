@@ -1,4 +1,5 @@
 //Background Changer
+let gameplayscreen = "url('../../Images/Gameplay/gameplay-BG.jpg')"
 let pausescreen = "url('../../Images/Gameplay/pause-BG.jpg')"
 let timesupscreen = "url('../../Images/Gameplay/timesup-BG.jpg')"
 let gameoverscreen = "url('../../Images/Menu/main-BG.jpg')"
@@ -15,6 +16,10 @@ function displayToggle(screen1,screen2){
 function pauseBG(){
     screenChange(pausescreen)
     displayToggle('.main-gameplay','.pause-screen')
+}
+function unpauseBG(){
+    screenChange(gameplayscreen)
+    displayToggle('.pause-screen','.main-gameplay')
 }
 function timesUpScreen(){
     screenChange(timesupscreen)
@@ -51,4 +56,13 @@ document.querySelector('#highscoreBTN').addEventListener('click', function(){
 
 document.querySelector('#mainmenuBTN').addEventListener('click',function(){
     document.location.href = 'Menu.html'
+})
+
+//Pause transitions
+document.querySelector('#quitBTN').addEventListener('click', function(){
+    document.location.href = '/HTML/Menu.html'
+})
+
+document.querySelector('#resumeBTN').addEventListener('click', function(){
+    unpauseBG()
 })

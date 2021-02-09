@@ -23,6 +23,7 @@ body{
 #equation-line{
     font-size:2em;
     color: white;
+    font-family: FG-FONT;
 }
 
 #countdown p{
@@ -40,6 +41,7 @@ body{
     position: absolute;
     top: 50%;
     left: 50%;
+    color: white;
     transform: translate(-50%, -50%);
     font-family: FG-FONT;
     font-size: 2.5em;
