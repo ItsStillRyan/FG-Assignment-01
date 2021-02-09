@@ -3,12 +3,12 @@ function numberGen(maxNum){
     let x = Math.floor((Math.random() * maxNum) + 1);
     return x
 }
-
 function placementGen(){
     let x = numberGen(4)
     let queryClass = ".buttonNum"+ x 
     return queryClass
 }
+
 //Option stones
 let x = document.querySelectorAll('.button-option').length
 for (let i = 0; i < x; i++){
@@ -29,8 +29,6 @@ for (let i = 0; i < x; i++){
         document.querySelector(placement).innerHTML = finalAns
 
         //highscore
-       let x = document.querySelector('.button-option').value
-       console.log(x)
-        
+    //    let x = document.querySelector('.button-option').value
     })
 }
