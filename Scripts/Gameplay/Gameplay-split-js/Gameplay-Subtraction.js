@@ -21,12 +21,19 @@ for (let i = 0; i < x; i++){
         document.querySelector('.buttonNum4').innerHTML = numberGen(20) - numberGen(5)
 
         //equation changer
-        let eqNum1 = document.querySelector('#eqNum1').innerHTML = numberGen(10)
-        let eqNum2 = document.querySelector('#eqNum2').innerHTML = numberGen(10)
+        let eqNum1 = numberGen(20)
+        let eqNum2 = numberGen(20)
+            if(eqNum1 > eqNum2){
+                console.log(eqNum1, eqNum2)
+                // document.querySelector('#eqNum1').innerHTML = eqNum1
+                // document.querySelector('#eqNum2').innerHTML = eqNum2
+
+                let finalAns = eqNum1 - eqNum2
+                let placement = placementGen()
+                document.querySelector(placement).innerHTML = finalAns
+            }
     
-        let finalAns = eqNum1 + eqNum2
-        let placement = placementGen()
-        document.querySelector(placement).innerHTML = finalAns
+        
 
         //highscore
     //    let x = document.querySelector('.button-option').value
