@@ -31,3 +31,4 @@ document.querySelector('#back-Btn').addEventListener('click', function(){
 document.querySelector('#highscoreBTN').addEventListener('click', function(){
     document.location.href = 'Highscore.html'
 })
+
