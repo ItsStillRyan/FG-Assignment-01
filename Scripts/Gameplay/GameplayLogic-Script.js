@@ -18,19 +18,19 @@ let counter = setInterval(function(){
     
 }, 1000);
 
-document.querySelector(".button-option1").addEventListener('click', function(){ 
-    document.querySelector('.buttonNum1').innerHTML = numberGen(20)
-})
-document.querySelector(".button-option2").addEventListener('click', function(){ 
-    document.querySelector('.buttonNum2').innerHTML = numberGen(20)
 
-})
-document.querySelector(".button-option3").addEventListener('click', function(){ 
-    document.querySelector('.buttonNum3').innerHTML = numberGen(20)
 
-})
-document.querySelector(".button-option4").addEventListener('click', function(){ 
-    document.querySelector('.buttonNum4').innerHTML = numberGen(20)
+let x = document.querySelectorAll('.button-option').length
 
-})
+console.log(x)
+
+
+for (let i = 0; i < x; i++){
+    document.querySelectorAll(".button-option")[i].addEventListener('click', function(){
+        document.querySelector(".buttonNum1").innerHTML = numberGen(20)
+        document.querySelector(".buttonNum2").innerHTML = numberGen(20)
+        document.querySelector(".buttonNum3").innerHTML = numberGen(20)
+        document.querySelector(".buttonNum4").innerHTML = numberGen(20)
+    })
+}
 
