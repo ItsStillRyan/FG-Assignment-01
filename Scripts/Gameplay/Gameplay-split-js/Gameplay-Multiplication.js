@@ -1,27 +1,22 @@
-
 //Functions
-function numberGen(maxNum) {
+//Number Generators
+function numberGen(maxNum){
     let x = Math.floor((Math.random() * maxNum) + 1);
     return x
 }
+function randomBetween(min, max) {
+  return Math.random() * (max - min) + min;
+}
+//Number Generators End
+
+
 function placementGen() {
     let x = numberGen(4)
     let queryClass = ".buttonNum" + x
     return queryClass
 }
 
-// function operatorshuffle() {
-// let operatorsList = ['+', '-'];
-//         let shuffle = Math.floor(Math.random() * 2)
-//         let finalOp = operatorsList[shuffle]
 
-//         let fStatement
-//         switch (shuffle) {
-//             case 0: fStatement = numberGen(10) + numberGen(5); break;
-//             case 1: fStatement = numberGen(10) - numberGen(5); break;
-//         }
-
-// }
 
 //Option stones
 let x = document.querySelectorAll('.button-option').length
