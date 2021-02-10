@@ -34,7 +34,6 @@ for (let i = 0; i < x; i++){
             }
     
         
-
         //highscore
     //    let x = document.querySelector('.button-option').value
     })
