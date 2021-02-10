@@ -10,18 +10,18 @@ function placementGen() {
     return queryClass
 }
 
-function operatorshuffle() {
-let operatorsList = ['+', '-'];
-        let shuffle = Math.floor(Math.random() * 2)
-        let finalOp = operatorsList[shuffle]
+// function operatorshuffle() {
+// let operatorsList = ['+', '-'];
+//         let shuffle = Math.floor(Math.random() * 2)
+//         let finalOp = operatorsList[shuffle]
 
-        let fStatement
-        switch (shuffle) {
-            case 0: fStatement = numberGen(10) + numberGen(5); break;
-            case 1: fStatement = numberGen(10) - numberGen(5); break;
-        }
+//         let fStatement
+//         switch (shuffle) {
+//             case 0: fStatement = numberGen(10) + numberGen(5); break;
+//             case 1: fStatement = numberGen(10) - numberGen(5); break;
+//         }
 
-}
+// }
 
 //Option stones
 let x = document.querySelectorAll('.button-option').length

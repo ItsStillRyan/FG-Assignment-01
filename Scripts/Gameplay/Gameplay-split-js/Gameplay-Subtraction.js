@@ -13,6 +13,8 @@ function placementGen() {
     let queryClass = ".buttonNum" + place()
     return queryClass
 }
+
+//staging for score counter
 function btnTriggerValue() {
     let queryClass = ".btnTrig" + place()
     return queryClass
