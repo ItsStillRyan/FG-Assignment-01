@@ -30,71 +30,83 @@ function placementGen() {
 
 
 function equationGen() {
+    //generating the question, left and right numbers
     let eqNum1 = parseInt(randomBetween(15, 30))
     let eqNum2 = parseInt(randomBetween(1, 15))
     document.querySelector('#eqNum1').innerHTML = eqNum1
     document.querySelector('#eqNum2').innerHTML = eqNum2
-
+    //getting the final and correct answer
     let finalAns = eqNum1 - eqNum2
+    //getting the random placement
     let placement = placementGen()
+    //outputting the answer with a random placement
     document.querySelector(placement.queryClass).innerHTML = finalAns
+
+    //showing what the random placement 1
     let x = placement.scoreCount
-    localStorage.setItem("placement", x)
-
-
-     return {
-        'scoreCount': x
+    localStorage.setItem("currentPlacement", x)
+    return {
+        'scoreCount': x,
+        'finalAns': finalAns
+        
     }
 
-
-
 }
-let scoreArray = []
-let y = equationGen()
 
-//Option stones
+
+//creting an option array
+let scoreArray = []
+// let triggerArray = []
+
+//Option stones // making querySelectorAll work
 let x = document.querySelectorAll('.button-option').length
 for (let i = 0; i < x; i++) {
     document.querySelectorAll('.button-option')[i].addEventListener('click', function () {
-        //numbers in button changer
-        //numbergen + numbergen to shuffle number twice and prevent repeating numbers
+
+        //Wrong answer generators + outputting them into the stones
+
+    
         document.querySelector('.buttonNum1').innerHTML = numberGen(numberGen(30))
         document.querySelector('.buttonNum2').innerHTML = parseInt(randomBetween(6, 31)) - numberGen(5)
         document.querySelector('.buttonNum3').innerHTML = numberGen(numberGen(30))
         document.querySelector('.buttonNum4').innerHTML = parseInt(randomBetween(8, 31)) - numberGen(7)
 
 
-        //buttonclicks to store value
+        //buttonclicks to store value of button position
         document.querySelector('.btnTrig1').addEventListener('click', function () {
             localStorage.setItem("btnTrig", "1");
-            equationGen()
         })
         document.querySelector('.btnTrig2').addEventListener('click', function () {
             localStorage.setItem("btnTrig", "2");
-            equationGen()
         })
         document.querySelector('.btnTrig3').addEventListener('click', function () {
             localStorage.setItem("btnTrig", "3");
-            equationGen()
         })
         document.querySelector('.btnTrig4').addEventListener('click', function () {
             localStorage.setItem("btnTrig", "4");
-            equationGen()
         })
 
-        let triggerValue = localStorage.getItem("btnTrig")
-        let answerValue = localStorage.getItem("placement")
 
-        console.log("button number", triggerValue)
-        console.log("random placement", answerValue)
-
+        //creating an array to store the random placements of correct answer
+        y = equationGen()
         scoreArray.unshift(y.scoreCount)
         console.log(scoreArray)
         localStorage.setItem("lastPlacement", scoreArray[1])
+
+
+        // let x = parseInt(localStorage.getItem("btnTrig"))
+        // triggerArray.unshift(x)
+        // console.log(triggerArray)
+        // localStorage.setItem("lastTriggered",scoreArray[1])
+
+
+        let answerValue = localStorage.getItem("lastPlacement")
+        let triggerValue = localStorage.getItem("btnTrig")
         
+        // console.log("button number", triggerValue)
+        // console.log("random placement", answerValue)
         
 
-        // localStorage.setItem("Highscore",0)
         if (triggerValue == answerValue) {
             let scoreIncrement = parseInt(localStorage.getItem("Highscore"))
             localStorage.setItem("Highscore", ++scoreIncrement)

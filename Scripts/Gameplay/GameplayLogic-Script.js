@@ -8,9 +8,15 @@ let counter = setInterval(function(){
         document.querySelector("#countdown p").innerHTML = startcount
     }
     startcount--;
+    localStorage.setItem("timerCountdown",startcount)
     
 }, 1000);
 
 
+document.querySelector("#pauseBtn").addEventListener('click', function(){
+    localStorage.setItem("timerStop",startcount)
+    clearTimeout(primaryTimer)
+    clearTimeout(secondaryTimer)
+})
 
 
