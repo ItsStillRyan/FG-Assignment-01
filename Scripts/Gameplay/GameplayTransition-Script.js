@@ -7,6 +7,10 @@ var gameoverscreen = "url('../../Images/Menu/main-BG.jpg')"
 function screenChange(BG){
     document.body.style.backgroundImage = BG
 }
+
+function pageRefresh(){
+    window.location.reload();
+} 
 //Background Changer END
 
 function displayToggle(screen1,screen2){
@@ -47,7 +51,7 @@ var secondaryTimer = window.setTimeout(gameoverScreen, 68000)
 
 //gameover buttons transitions
 document.querySelector('#replayBTN').addEventListener('click', function(){
-    document.location.href = '../Menu.html'
+    pageRefresh()
 })
 
 document.querySelector('#highscoreBTN').addEventListener('click', function(){
@@ -55,7 +59,7 @@ document.querySelector('#highscoreBTN').addEventListener('click', function(){
 })
 
 document.querySelector('#mainmenuBTN').addEventListener('click',function(){
-    document.location.href = '/Menu.html'
+    document.location.href = '../Menu.html'
 })
 
 //Pause transitions

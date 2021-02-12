@@ -16,10 +16,6 @@ counter = setInterval(function(){
 
 }, 1000)
 
-
-
-
-
 //stopping the clock
 document.querySelector("#pauseBtn").addEventListener('click', function () {
     //collecting last known time + clearing current timeouts
@@ -35,7 +31,7 @@ document.querySelector("#resumeBTN").addEventListener('click', function () {
     let newtime = parseInt(localStorage.getItem("timerStop"))
     localStorage.setItem("timerCountdown", newtime)
     window.setTimeout(timesUpScreen, (newtime * 1000))
-    window.setTimeout(timesUpScreen, ((newtime * 1000) + 3000))
+    window.setTimeout(gameoverScreen, ((newtime * 1000) + 5000))
     pausedBool = false;
 })
 
