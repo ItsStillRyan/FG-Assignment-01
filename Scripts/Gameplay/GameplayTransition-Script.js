@@ -1,8 +1,8 @@
 //Background Changer
-let gameplayscreen = "url('../../Images/Gameplay/gameplay-BG.jpg')"
-let pausescreen = "url('../../Images/Gameplay/pause-BG.jpg')"
-let timesupscreen = "url('../../Images/Gameplay/timesup-BG.jpg')"
-let gameoverscreen = "url('../../Images/Menu/main-BG.jpg')"
+var gameplayscreen = "url('../../Images/Gameplay/gameplay-BG.jpg')"
+var pausescreen = "url('../../Images/Gameplay/pause-BG.jpg')"
+var timesupscreen = "url('../../Images/Gameplay/timesup-BG.jpg')"
+var gameoverscreen = "url('../../Images/Menu/main-BG.jpg')"
 
 function screenChange(BG){
     document.body.style.backgroundImage = BG
@@ -37,11 +37,11 @@ document.querySelector('#pauseBtn').addEventListener('click', function()
 })
 
 //Times up screen
-let primaryTimer = window.setTimeout(timesUpScreen, 65000)
+var primaryTimer = window.setTimeout(timesUpScreen, 65000)
 //Times Up screen END
 
 //Final Score
-let secondaryTimer = window.setTimeout(gameoverScreen, 68000)
+var secondaryTimer = window.setTimeout(gameoverScreen, 68000)
 //Final Score END
 
 
