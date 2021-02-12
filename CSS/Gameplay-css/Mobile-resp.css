@@ -14,6 +14,27 @@ body{
     background-position: center ;
     min-width: 375px;
 }
+/* SETTINGS PAGE*/
+.settings-screen{
+    display: none;
+    margin: auto;
+}
+
+.music-toggle{
+    margin-top: 40vh;
+}
+.music-toggle p{
+    padding-right:10px;
+}
+.sfx-toggle{
+    margin-top:3vh;
+}
+.sfx-toggle p{
+    padding-right: 25px;
+    padding-left: 10px
+}
+
+/* SETTINGS PAGE END */
 
 #pauseBtn{
     float:right;

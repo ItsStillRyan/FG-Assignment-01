@@ -16,6 +16,8 @@ counter = setInterval(function(){
 
 }, 1000)
 
+
+
 //stopping the clock
 document.querySelector("#pauseBtn").addEventListener('click', function () {
     //collecting last known time + clearing current timeouts
