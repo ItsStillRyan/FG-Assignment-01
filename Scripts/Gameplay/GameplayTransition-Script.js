@@ -47,15 +47,15 @@ window.setTimeout(gameoverScreen, 68000)
 
 //gameover buttons transitions
 document.querySelector('#replayBTN').addEventListener('click', function(){
-    document.location.href = 'Gameplay.html'
+    document.location.href = '../Menu.html'
 })
 
 document.querySelector('#highscoreBTN').addEventListener('click', function(){
-    document.location.href = 'Highscore.html'
+    document.location.href = '../Highscore.html'
 })
 
 document.querySelector('#mainmenuBTN').addEventListener('click',function(){
-    document.location.href = 'Menu.html'
+    document.location.href = '/Menu.html'
 })
 
 //Pause transitions

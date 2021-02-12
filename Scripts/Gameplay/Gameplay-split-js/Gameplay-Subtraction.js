@@ -27,6 +27,8 @@ function placementGen() {
     }
 }
 
+
+
 function equationGen() {
     let eqNum1 = parseInt(randomBetween(15, 30))
     let eqNum2 = parseInt(randomBetween(1, 15))
@@ -36,8 +38,19 @@ function equationGen() {
     let finalAns = eqNum1 - eqNum2
     let placement = placementGen()
     document.querySelector(placement.queryClass).innerHTML = finalAns
-    return placement.buttonClass
+    let x = placement.scoreCount
+    localStorage.setItem("placement", x)
+
+
+     return {
+        'scoreCount': x
+    }
+
+
+
 }
+let scoreArray = []
+let y = equationGen()
 
 //Option stones
 let x = document.querySelectorAll('.button-option').length
@@ -70,10 +83,16 @@ for (let i = 0; i < x; i++) {
         })
 
         let triggerValue = localStorage.getItem("btnTrig")
-        let answerValue = document.querySelector(equationGen()).value
+        let answerValue = localStorage.getItem("placement")
 
-        // console.log("button number",triggerValue)
-        // console.log("random placement",answerValue)
+        console.log("button number", triggerValue)
+        console.log("random placement", answerValue)
+
+        scoreArray.unshift(y.scoreCount)
+        console.log(scoreArray)
+        localStorage.setItem("lastPlacement", scoreArray[1])
+        
+        
 
         // localStorage.setItem("Highscore",0)
         if (triggerValue == answerValue) {
@@ -81,7 +100,6 @@ for (let i = 0; i < x; i++) {
             localStorage.setItem("Highscore", ++scoreIncrement)
             console.log(scoreIncrement)
         }
-
     })
 }
 
