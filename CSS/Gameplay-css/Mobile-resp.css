@@ -20,6 +20,22 @@ body{
     margin: auto;
 }
 
+.audio-toggle{
+    margin-top: 42vh;
+}
+
+.audio-toggle audio{
+    width: 80%;
+}
+
+.SFX-toggle{
+    margin-top: 2vh;
+}
+
+.SFX-toggle audio{
+    width:80%
+}
+
 .music-toggle{
     margin-top: 40vh;
 }
@@ -93,7 +109,7 @@ body{
 }
 #settingsBtn img{
     height: 55px;
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
 /* PAUSE CSS END*/
