@@ -1,0 +1,28 @@
+[
+    {
+        "main_menu": {
+            "title": "",
+            "play_button": "",
+            "operations_select":""
+        },
+        "gamplay":{
+            "pause_page":{
+                "resume": "",
+                "quit":"",
+                "back":""
+            },
+            "timesup_page":{
+                "timesup_title": "",
+                "times_up": ""
+            },
+            "gameover_page":{
+                "gameover_title": "",
+                "your_score":""
+            }
+        },
+        "highscore_page":{
+            "highscore_title": "",
+            "back": ""
+        }
+    }
+]

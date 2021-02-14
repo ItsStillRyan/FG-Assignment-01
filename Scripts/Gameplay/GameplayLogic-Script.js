@@ -37,4 +37,3 @@ document.querySelector("#resumeBTN").addEventListener('click', function () {
     pausedBool = false;
 })
 
-

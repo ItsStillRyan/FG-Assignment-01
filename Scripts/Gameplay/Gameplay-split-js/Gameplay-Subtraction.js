@@ -27,8 +27,6 @@ function placementGen() {
     }
 }
 
-
-
 function equationGen() {
     //generating the question, left and right numbers
     let eqNum1 = parseInt(randomBetween(15, 30))
@@ -48,11 +46,10 @@ function equationGen() {
     return {
         'scoreCount': x,
         'finalAns': finalAns
-        
+
     }
 
 }
-
 
 //creting an option array
 let scoreArray = []
@@ -63,9 +60,13 @@ let x = document.querySelectorAll('.button-option').length
 for (let i = 0; i < x; i++) {
     document.querySelectorAll('.button-option')[i].addEventListener('click', function () {
 
-        //Wrong answer generators + outputting them into the stones
+        //creating an array to store the random placements of correct answer
+        y = equationGen()
+        scoreArray.unshift(y.scoreCount)
+        console.log(scoreArray)
+        localStorage.setItem("lastPlacement", scoreArray[1])
 
-    
+        //Wrong answer generators + outputting them into the stones
         document.querySelector('.buttonNum1').innerHTML = numberGen(numberGen(30))
         document.querySelector('.buttonNum2').innerHTML = parseInt(randomBetween(6, 31)) - numberGen(5)
         document.querySelector('.buttonNum3').innerHTML = numberGen(numberGen(30))
@@ -87,11 +88,7 @@ for (let i = 0; i < x; i++) {
         })
 
 
-        //creating an array to store the random placements of correct answer
-        y = equationGen()
-        scoreArray.unshift(y.scoreCount)
-        console.log(scoreArray)
-        localStorage.setItem("lastPlacement", scoreArray[1])
+
 
 
         // let x = parseInt(localStorage.getItem("btnTrig"))
@@ -102,10 +99,10 @@ for (let i = 0; i < x; i++) {
 
         let answerValue = localStorage.getItem("lastPlacement")
         let triggerValue = localStorage.getItem("btnTrig")
-        
+
         // console.log("button number", triggerValue)
         // console.log("random placement", answerValue)
-        
+
 
         if (triggerValue == answerValue) {
             let scoreIncrement = parseInt(localStorage.getItem("Highscore"))
