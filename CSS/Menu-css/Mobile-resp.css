@@ -31,7 +31,13 @@ body{
     display: none;
     margin: auto;
 }
+.audio-toggle{
+    margin-top: 40vh;
+}
 
+.audio-toggle audio{
+    width: 80%;
+}
 .music-toggle{
     margin-top: 40vh;
 }
@@ -45,7 +51,6 @@ body{
     padding-right: 25px;
     padding-left: 10px
 }
-
 /* SETTINGS PAGE END */
 
 /* MATH OPERATORS */
@@ -80,7 +85,7 @@ body{
     width: 70%;
 }
 .back-Btn{
-    margin-top: 15vh;
+    margin-top: 7vh;
 }
 }
 /* ---------------------------------------- */
