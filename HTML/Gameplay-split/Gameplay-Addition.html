@@ -23,7 +23,7 @@
                 </div>
 
                 <div class="col boxbor">
-                    <button type="image" class="btn" id="pauseBtn" onclick="pauseBG();pauseMusic()">
+                    <button type="image" class="btn" id="pauseBtn" onclick="pauseBG(); pauseMusic()">
                         <img src="../../Images/Gameplay/gameplay-Pause.png" alt="">
                     </button>
                 </div>
@@ -35,10 +35,10 @@
             <div class="row">
                 <div class="col boxbor text-center">
                     <p id="equation-line">
-                       <span id="eqNum1">0</span> 
-                       + 
-                       <span id="eqNum2">0</span> 
-                       = ? </p>
+                        <span id="eqNum1">0</span>
+                        +
+                        <span id="eqNum2">0</span>
+                        = ? </p>
                 </div>
             </div>
         </div>
@@ -56,13 +56,13 @@
             <div class="row ">
 
                 <div class="col boxbor text-center buttonWrap">
-                    <button class="btn button-option" value=".buttonNum1">
+                    <button class="btn button-option btnTrig1" value="1">
                         <img src="../../Images/Gameplay/optionsBTN.png" class="button-options" alt="">
                         <p class="buttonNum1 buttonNum">0</p>
                     </button>
                 </div>
                 <div class="col boxbor text-center buttonWrap">
-                    <button class="btn button-option">
+                    <button class="btn button-option btnTrig2" value="2">
                         <img src="../../Images/Gameplay/optionsBTN.png" class="button-options" alt="">
                         <p class="buttonNum2 buttonNum">0</p>
                     </button>
@@ -71,13 +71,13 @@
                 <div class="w-100"></div>
 
                 <div class="col boxbor text-center buttonWrap">
-                    <button class="btn button-option">
+                    <button class="btn button-option btnTrig3" value="3">
                         <img src="../../Images/Gameplay/optionsBTN.png" class="button-options" alt="">
                         <p class="buttonNum3 buttonNum">0</p>
                     </button>
                 </div>
                 <div class="col boxbor text-center buttonWrap">
-                    <button class="btn button-option">
+                    <button class="btn button-option btnTrig4" value="4">
                         <img src="../../Images/Gameplay/optionsBTN.png" class="button-options" alt="">
                         <p class="buttonNum4 buttonNum">0</p>
                     </button>
@@ -112,7 +112,7 @@
                 <div class="w-100"></div>
                 <div class="col boxbor"></div>
                 <div class="col boxbor  text-center">
-                    <button type="image" class="gpBTN btn" id="quitBTN" >
+                    <button type="image" class="gpBTN btn" id="quitBTN">
                         <img src="../../Images/Gameplay/pause-Quit.png" alt="">
                     </button>
                 </div>
@@ -170,15 +170,12 @@
         <div class="container">
             <div class="row">
                 <div class="col audio-toggle showcol text-center">
-                    <audio controls autoplay loop>
-                        <source src="../Additionals/Main-Mu.mp3" type="audio/mp3">
+                    <audio controls autoplay id="gameplayAudio">
+                        <source src="../../Additionals/Gameplay-Mu.mp3" type="audio/mp3">
                     </audio>
                 </div>
-
             </div>
-        </div>
 
-        <div class="container back-Btn">
             <div class="row">
                 <div class="col showcol text-center">
                     <button type="image" class="btn" id="back-Btn">
@@ -194,9 +191,14 @@
     </div>
 
     <div class="gameover-screen">
+        <div class="scoreboardWrap">
+            <div id="score-board">
+                <img src="../../Images/Gameplay/Gameover-board.png" class="score-board" alt="">
+            </div>
 
-        <div id="score-board">
-            <img src="../../Images/Gameplay/Gameover-board.png" class="score-board" alt="">
+            <div id="score-Number scoreAddition">
+                <p>0</p>
+            </div>
         </div>
         <div class="container btn-box">
             <div class="row">
@@ -218,10 +220,12 @@
     </div>
 
 
+
     <!-- SCRIPTS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
         crossorigin="anonymous"></script>
+
     <script src="../../Scripts/Gameplay/GameplayTransition-Script.js"></script>
     <script src="../../Scripts/Gameplay/GameplayLogic-Script.js"></script>
     <script src="../../Scripts/Gameplay/Gameplay-split-js/Gameplay-Addition.js"></script>

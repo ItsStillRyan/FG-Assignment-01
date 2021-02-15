@@ -1,4 +1,3 @@
-
 //Functions
 //Number Generators
 function numberGen(maxNum) {
@@ -99,7 +98,7 @@ for (let i = 0; i < x; i++) {
 
 
         if (triggerValue == answerValue) {
-            let scoreIncrement = parseInt(localStorage.getItem("Highscore"))
+            let scoreIncrement = parseInt(localStorage.getItem("subtractionHighscore"))
             localStorage.setItem("subtractionHighscore", ++scoreIncrement)
             console.log(scoreIncrement)
         }
