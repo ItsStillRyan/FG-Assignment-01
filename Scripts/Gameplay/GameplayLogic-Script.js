@@ -37,3 +37,13 @@ document.querySelector("#resumeBTN").addEventListener('click', function () {
     pausedBool = false;
 })
 
+
+//audio pause 
+var audioSource = document.querySelector('#gameplayAudio')
+
+function pauseMusic(){
+    audioSource.pause()
+}
+function resumeMusic(){
+    audioSource.play()
+}

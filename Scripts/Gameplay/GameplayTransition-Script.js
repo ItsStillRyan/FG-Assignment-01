@@ -34,8 +34,6 @@ function gameoverScreen(){
 
 
 
-
-
 document.querySelector('#pauseBtn').addEventListener('click', function()
 {
     pauseBG()
