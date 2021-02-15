@@ -136,6 +136,7 @@ body{
     height: 48vh;
     margin-top: 20vh;
     margin-left: 2px;
+
 }
 
 .gmBTN img{
@@ -150,6 +151,23 @@ body{
     margin-top: 5vh;
 }
 
+.scoreboardWrap{
+    position: relative;
+    text-align: center;
+    margin-left:auto;
+    margin-right:auto;
+    
+
+}
+#score-Number p{
+    font-family: FG-FONT;
+    font-size: 5.5em;
+    color:black;
+    position: absolute;
+    top: 82%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 
 
 /* Gameover-screen END */

@@ -32,8 +32,6 @@ function gameoverScreen(){
     displayToggle('.timesup-screen','.gameover-screen')
 }
 
-
-
 document.querySelector('#pauseBtn').addEventListener('click', function()
 {
     pauseBG()

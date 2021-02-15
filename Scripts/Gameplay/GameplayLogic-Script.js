@@ -47,3 +47,13 @@ function pauseMusic(){
 function resumeMusic(){
     audioSource.play()
 }
+
+//replacing highscore in database
+// window.setTimeout(function(){
+//     let finalSub = localStorage.getItem('subtractionHighscore')
+//     let finalMul = localStorage
+//     let finalDiv = 
+//     let finalAdd = 
+//     document.querySelector("#scoreSubtraction").innerHTML = finalSub
+
+// }, 68000)

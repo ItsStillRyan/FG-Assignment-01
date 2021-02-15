@@ -53,18 +53,11 @@ function equationGen() {
 
 //creting an option array
 let scoreArray = []
-// let triggerArray = []
 
 //Option stones // making querySelectorAll work
 let x = document.querySelectorAll('.button-option').length
 for (let i = 0; i < x; i++) {
     document.querySelectorAll('.button-option')[i].addEventListener('click', function () {
-
-        //creating an array to store the random placements of correct answer
-        y = equationGen()
-        scoreArray.unshift(y.scoreCount)
-        console.log(scoreArray)
-        localStorage.setItem("lastPlacement", scoreArray[1])
 
         //Wrong answer generators + outputting them into the stones
         document.querySelector('.buttonNum1').innerHTML = numberGen(numberGen(30))
@@ -87,26 +80,27 @@ for (let i = 0; i < x; i++) {
             localStorage.setItem("btnTrig", "4");
         })
 
-
-
-
-
-        // let x = parseInt(localStorage.getItem("btnTrig"))
-        // triggerArray.unshift(x)
-        // console.log(triggerArray)
-        // localStorage.setItem("lastTriggered",scoreArray[1])
-
+        //creating an array to store the random placements of correct answer
+        y = equationGen()
+        scoreArray.unshift(y.scoreCount)
+        console.log(scoreArray)
+        localStorage.setItem("lastPlacement", scoreArray[2])
 
         let answerValue = localStorage.getItem("lastPlacement")
         let triggerValue = localStorage.getItem("btnTrig")
 
-        // console.log("button number", triggerValue)
-        // console.log("random placement", answerValue)
+        console.log("button number", triggerValue)
+        console.log("random placement", answerValue)
+
+        //cutoff for array
+        if(scoreArray.length > 5){
+            scoreArray.pop()
+        }
 
 
         if (triggerValue == answerValue) {
             let scoreIncrement = parseInt(localStorage.getItem("Highscore"))
-            localStorage.setItem("Highscore", ++scoreIncrement)
+            localStorage.setItem("subtractionHighscore", ++scoreIncrement)
             console.log(scoreIncrement)
         }
     })
