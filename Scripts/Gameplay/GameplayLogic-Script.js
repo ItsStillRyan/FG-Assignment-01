@@ -49,11 +49,15 @@ function resumeMusic(){
 }
 
 //replacing highscore in database
-// window.setTimeout(function(){
-//     let finalSub = localStorage.getItem('subtractionHighscore')
-//     let finalMul = localStorage
-//     let finalDiv = 
-//     let finalAdd = 
-//     document.querySelector("#scoreSubtraction").innerHTML = finalSub
+window.setTimeout(function(){
+    let finalSub = localStorage.getItem('subtractionHighscore')
+    let finalMul = localStorage.getItem('multiplicationsHighscore')
+    let finalDiv = localStorage.getItem('divisionHighscore')
+    let finalAdd = localStorage.getItem('additionHighscore')
 
-// }, 68000)
+    document.querySelector('#scoreSubtraction').innerHTML = finalSub
+    document.querySelector('#scoreMultiply').innerHTML = finalMul
+    document.querySelector('#scoreDivision').innerHTML = finalDiv
+    document.querySelector('#scoreAddition').innerHTML = finalAdd
+
+}, 3)

@@ -128,7 +128,7 @@ body{
 /* Gameover-screen */
 
 .gameover-screen{
-    display: none;
+    display: block;
     text-align: center;
 }
 
@@ -159,7 +159,7 @@ body{
     
 
 }
-#score-Number p{
+#scoreText{
     font-family: FG-FONT;
     font-size: 5.5em;
     color:black;
@@ -176,7 +176,7 @@ body{
 
 /* Display swap */
 .main-gameplay{
-    display: block;
+    display: none;
 }
 .pause-screen{
     display: none;
