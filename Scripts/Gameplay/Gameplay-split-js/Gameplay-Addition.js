@@ -52,6 +52,8 @@ function equationGen() {
 //creting an option array
 let scoreArray = []
 localStorage.setItem("additionHighscore", 3)
+
+
 //Option stones
 let x = document.querySelectorAll('.button-option').length
 for (let i = 0; i < x; i++) {
