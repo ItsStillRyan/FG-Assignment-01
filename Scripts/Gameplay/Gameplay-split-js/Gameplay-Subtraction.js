@@ -52,7 +52,7 @@ function equationGen() {
 
 //creting an option array
 let scoreArray = []
-localStorage.setItem("subtractionHighscore", 0)
+localStorage.setItem("subtractionHighscore", 3)
 //Option stones // making querySelectorAll work
 let x = document.querySelectorAll('.button-option').length
 for (let i = 0; i < x; i++) {
