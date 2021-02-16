@@ -128,7 +128,7 @@ body{
 /* Gameover-screen */
 
 .gameover-screen{
-    display: block;
+    display: none;
     text-align: center;
 }
 
@@ -176,7 +176,7 @@ body{
 
 /* Display swap */
 .main-gameplay{
-    display: none;
+    display: block;
 }
 .pause-screen{
     display: none;

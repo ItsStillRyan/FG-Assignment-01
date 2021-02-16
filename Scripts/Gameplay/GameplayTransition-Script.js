@@ -56,12 +56,12 @@ document.querySelector('#highscoreBTN').addEventListener('click', function(){
 })
 
 document.querySelector('#mainmenuBTN').addEventListener('click',function(){
-    document.location.href = '../Menu.html'
+    document.location.href = '../../Index.html'
 })
 
 //Pause transitions
 document.querySelector('#quitBTN').addEventListener('click', function(){
-    document.location.href = '/HTML/Menu.html'
+    document.location.href = '../../Index.html'
 })
 
 document.querySelector('#resumeBTN').addEventListener('click', function(){

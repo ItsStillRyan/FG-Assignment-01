@@ -29,6 +29,6 @@ document.querySelector('#back-Btn').addEventListener('click', function(){
 
 //highscore transitions
 document.querySelector('#highscoreBTN').addEventListener('click', function(){
-    document.location.href = 'Highscore.html'
+    document.location.href = '../HTML/Highscore.html'
 })
 

@@ -55,9 +55,9 @@ window.setTimeout(function(){
     let finalDiv = localStorage.getItem('divisionHighscore')
     let finalAdd = localStorage.getItem('additionHighscore')
 
-    document.querySelector('#scoreSubtraction').innerHTML = finalSub
+    document.querySelector('#scoreSubtraction').innertext = finalSub
     document.querySelector('#scoreMultiply').innerHTML = finalMul
     document.querySelector('#scoreDivision').innerHTML = finalDiv
-    document.querySelector('#scoreAddition').innerHTML = finalAdd
+    document.querySelector('#scoreAddition').innertext = finalAdd
 
 }, 3)
