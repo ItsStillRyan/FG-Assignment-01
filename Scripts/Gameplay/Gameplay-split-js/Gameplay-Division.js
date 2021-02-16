@@ -67,6 +67,7 @@ function equationGen() {
 
     
 let scoreArray = []
+localStorage.setItem("divisionHighscore", 0)
 //Option stones
 let x = document.querySelectorAll('.button-option').length
 for (let i = 0; i < x; i++){
