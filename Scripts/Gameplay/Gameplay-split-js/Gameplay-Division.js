@@ -118,3 +118,9 @@ for (let i = 0; i < x; i++){
     })
 }
 
+
+//replacing highscore in database
+window.setTimeout(function(){
+    let finalAdd = localStorage.getItem('divisionHighscore')
+    document.querySelector('.scoreDivision').innerHTML = finalAdd
+}, 67000)

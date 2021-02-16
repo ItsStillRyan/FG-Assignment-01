@@ -100,4 +100,12 @@ for (let i = 0; i < x; i++) {
             console.log(scoreIncrement)
         }
     })
+
 }
+
+
+//replacing highscore in database
+window.setTimeout(function(){
+    let finalAdd = localStorage.getItem('additionHighscore')
+    document.querySelector('.scoreAddition').innerHTML = finalAdd
+}, 67000)

@@ -88,9 +88,6 @@ for (let i = 0; i < x; i++) {
         let answerValue = localStorage.getItem("lastPlacement")
         let triggerValue = localStorage.getItem("btnTrig")
 
-        console.log("button number", triggerValue)
-        console.log("random placement", answerValue)
-
         //cutoff for array
         if(scoreArray.length > 5){
             scoreArray.pop()
@@ -100,8 +97,13 @@ for (let i = 0; i < x; i++) {
         if (triggerValue == answerValue) {
             let scoreIncrement = parseInt(localStorage.getItem("subtractionHighscore"))
             localStorage.setItem("subtractionHighscore", ++scoreIncrement)
-            console.log(scoreIncrement)
-        }
+            }
     })
 }
 
+
+//replacing highscore in database
+window.setTimeout(function(){
+    let finalAdd = localStorage.getItem('subtractionHighscore')
+    document.querySelector('.scoreSubtraction').innerHTML = finalAdd
+}, 67000)

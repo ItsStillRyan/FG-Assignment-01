@@ -48,16 +48,3 @@ function resumeMusic(){
     audioSource.play()
 }
 
-//replacing highscore in database
-window.setTimeout(function(){
-    let finalSub = localStorage.getItem('subtractionHighscore')
-    let finalMul = localStorage.getItem('multiplicationsHighscore')
-    let finalDiv = localStorage.getItem('divisionHighscore')
-    let finalAdd = localStorage.getItem('additionHighscore')
-
-    document.querySelector('#scoreSubtraction').innertext = finalSub
-    document.querySelector('#scoreMultiply').innerHTML = finalMul
-    document.querySelector('#scoreDivision').innerHTML = finalDiv
-    document.querySelector('#scoreAddition').innertext = finalAdd
-
-}, 3)

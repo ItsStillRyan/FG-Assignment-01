@@ -103,3 +103,9 @@ for (let i = 0; i < x; i++) {
         }
     })
 }
+
+//replacing highscore in database
+window.setTimeout(function(){
+    let finalAdd = localStorage.getItem('multiplicationsHighscore')
+    document.querySelector('.scoreMultiply').innerHTML = finalAdd
+}, 67000)

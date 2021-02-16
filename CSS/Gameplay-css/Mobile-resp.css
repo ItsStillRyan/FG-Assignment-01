@@ -116,7 +116,6 @@ body{
 
 /* timesup-screen */
 .timesup-screen{
-     display: none;
      padding: 30px;
 }
 
@@ -128,7 +127,7 @@ body{
 /* Gameover-screen */
 
 .gameover-screen{
-    display: none;
+
     text-align: center;
 }
 
@@ -159,12 +158,12 @@ body{
     
 
 }
-#scoreText{
+.scoreText{
     font-family: FG-FONT;
     font-size: 5.5em;
     color:black;
     position: absolute;
-    top: 82%;
+    top: 85%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -181,7 +180,12 @@ body{
 .pause-screen{
     display: none;
 }
-
+.gameover-screen{
+    display: none;
+}
+.timesup-screen{
+     display: none;
+}
 
 /* ---------------------------------------- */
 /* Mobile small - 4.7in */
