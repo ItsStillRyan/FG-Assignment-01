@@ -64,50 +64,51 @@ let scoreArray = []
 localStorage.setItem("subtractionHighscore", 1)
 //Option stones // making querySelectorAll work
 let x = document.querySelectorAll('.button-option').length
-for (let i = 0; i < x; i++) {
-    document.querySelectorAll('.clickStartBtn, .button-option')[i].addEventListener('click', function () {
+document.querySelector('.clickStartBtn').addEventListener('click', function () {
+    for (let i = 0; i < x; i++) {
+        document.querySelectorAll('.button-option')[i].addEventListener('click', function () {
 
-        //Wrong answer generators + outputting them into the stones
-        document.querySelector('.buttonNum1').innerHTML = numberGen(numberGen(30))
-        document.querySelector('.buttonNum2').innerHTML = parseInt(randomBetween(6, 31)) - numberGen(5)
-        document.querySelector('.buttonNum3').innerHTML = numberGen(numberGen(30))
-        document.querySelector('.buttonNum4').innerHTML = parseInt(randomBetween(8, 31)) - numberGen(7)
+            //Wrong answer generators + outputting them into the stones
+            document.querySelector('.buttonNum1').innerHTML = numberGen(numberGen(30))
+            document.querySelector('.buttonNum2').innerHTML = parseInt(randomBetween(6, 31)) - numberGen(5)
+            document.querySelector('.buttonNum3').innerHTML = numberGen(numberGen(30))
+            document.querySelector('.buttonNum4').innerHTML = parseInt(randomBetween(8, 31)) - numberGen(7)
 
 
-        //buttonclicks to store value of button position
-        document.querySelector('.btnTrig1').addEventListener('click', function () {
-            localStorage.setItem("btnTrig", "1");
+            //buttonclicks to store value of button position
+            document.querySelector('.btnTrig1').addEventListener('click', function () {
+                localStorage.setItem("btnTrig", "1");
+            })
+            document.querySelector('.btnTrig2').addEventListener('click', function () {
+                localStorage.setItem("btnTrig", "2");
+            })
+            document.querySelector('.btnTrig3').addEventListener('click', function () {
+                localStorage.setItem("btnTrig", "3");
+            })
+            document.querySelector('.btnTrig4').addEventListener('click', function () {
+                localStorage.setItem("btnTrig", "4");
+            })
+
+            //creating an array to store the random placements of correct answer
+            y = equationGen()
+            scoreArray.unshift(y.scoreCount)
+            console.log(scoreArray)
+            localStorage.setItem("lastPlacement", scoreArray[2])
+
+            let answerValue = localStorage.getItem("lastPlacement")
+            let triggerValue = localStorage.getItem("btnTrig")
+
+            //cutoff for array
+            if (scoreArray.length > 5) {
+                scoreArray.pop()
+            }
+
+
+            if (triggerValue == answerValue) {
+                let scoreIncrement = parseInt(localStorage.getItem("subtractionHighscore"))
+                localStorage.setItem("subtractionHighscore", ++scoreIncrement)
+            }
         })
-        document.querySelector('.btnTrig2').addEventListener('click', function () {
-            localStorage.setItem("btnTrig", "2");
-        })
-        document.querySelector('.btnTrig3').addEventListener('click', function () {
-            localStorage.setItem("btnTrig", "3");
-        })
-        document.querySelector('.btnTrig4').addEventListener('click', function () {
-            localStorage.setItem("btnTrig", "4");
-        })
+    }
 
-        //creating an array to store the random placements of correct answer
-        y = equationGen()
-        scoreArray.unshift(y.scoreCount)
-        console.log(scoreArray)
-        localStorage.setItem("lastPlacement", scoreArray[2])
-
-        let answerValue = localStorage.getItem("lastPlacement")
-        let triggerValue = localStorage.getItem("btnTrig")
-
-        //cutoff for array
-        if (scoreArray.length > 5) {
-            scoreArray.pop()
-        }
-
-
-        if (triggerValue == answerValue) {
-            let scoreIncrement = parseInt(localStorage.getItem("subtractionHighscore"))
-            localStorage.setItem("subtractionHighscore", ++scoreIncrement)
-        }
-    })
-}
-
-
+})

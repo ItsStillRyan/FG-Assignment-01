@@ -64,7 +64,7 @@ function highscoreClock() {
     window.setTimeout(function () {
         let finalAdd = localStorage.getItem('additionHighscore')
         document.querySelector('.scoreAddition').innerHTML = finalAdd
-    }, 65000)
+    }, 62000)
 }
 
 //creting an option array
@@ -132,16 +132,16 @@ document.querySelector('.clickStartBtn').addEventListener('click', function () {
                 console.log(scoreIncrement)
             }
 
-            //catching duplicates
-            //    if (y.finalAns == wrongNum[0]){
-            //         document.querySelector('.buttonNum1').innerHTML = numberGen(numberGen(60))
-            //    }else if (y.finalAns == wrongNum[1]){
-            //         document.querySelector('.buttonNum2').innerHTML = parseInt(randomBetween(6, 60)) - numberGen(5)
-            //    }else if(y.finalAns == wrongNum[2]){
-            //         document.querySelector('.buttonNum3').innerHTML = numberGen(numberGen(60))
-            //    }else if(y.finalAns == wrongNum[3]){
-            //         document.querySelector('.buttonNum4').innerHTML = parseInt(randomBetween(8, 60)) - numberGen(7)
-            //    }
+            // catching duplicates
+               if (y.finalAns == wrongNum[0]){
+                    document.querySelector('.buttonNum1').innerHTML = numberGen(numberGen(60))
+               }else if (y.finalAns == wrongNum[1]){
+                    document.querySelector('.buttonNum2').innerHTML = parseInt(randomBetween(6, 60)) - numberGen(5)
+               }else if(y.finalAns == wrongNum[2]){
+                    document.querySelector('.buttonNum3').innerHTML = numberGen(numberGen(60))
+               }else if(y.finalAns == wrongNum[3]){
+                    document.querySelector('.buttonNum4').innerHTML = parseInt(randomBetween(8, 60)) - numberGen(7)
+               }
 
         })
 

@@ -32,3 +32,4 @@ document.querySelector('#highscoreBTN').addEventListener('click', function(){
     document.location.href = '../HTML/Highscore.html'
 })
 
+
