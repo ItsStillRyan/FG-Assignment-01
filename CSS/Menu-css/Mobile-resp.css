@@ -38,19 +38,13 @@ body{
 .audio-toggle audio{
     width: 80%;
 }
-.music-toggle{
-    margin-top: 40vh;
+
+.language-Toggle img{
+    width: 30px;
 }
-.music-toggle p{
-    padding-right:10px;
-}
-.sfx-toggle{
-    margin-top:3vh;
-}
-.sfx-toggle p{
-    padding-right: 25px;
-    padding-left: 10px
-}
+
+
+
 /* SETTINGS PAGE END */
 
 /* MATH OPERATORS */
@@ -190,4 +184,5 @@ body{
 .backBtn{
     margin-top: 3vh;
     width: 90%;
+}
 }

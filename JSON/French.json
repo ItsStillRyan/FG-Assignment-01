@@ -1,26 +1,24 @@
-[
-    {
-        "main_menu": {
-            "title": "../Images/French/main_title.png",
-            "play_button": "../Images/French/main_play.png",
-            "operations_select":"../Images/French/math-op.png"
-        },
-        "gamplay":{
-            "pause_page":{
-                "resume": "../Images/French/pause-resume.png",
-                "quit":"../Images/French/pause-quit.png",
-                "back":"../Images/French/back.png"
-            },
-            "timesup_page":{
-                "times_up": "../Images/French/gameplay-timesup.png"
-            },
-            "gameover_page":{
-                "your_score":"../Images/French/gameplay-gameover"
-            }
-        },
-        "highscore_page":{
-            "highscore_title": "../Images/French/highscore-board.png",
+{
+    "main_menu": {
+        "title": "../Images/French/main_title.png",
+        "play_button": "../Images/French/main-play.png",
+        "operations_select":"../Images/French/math-op.png"
+    },
+    "gameplay":{
+        "pause_page":{
+            "resume": "../Images/French/pause-resume.png",
+            "quit":"../Images/French/pause-quit.png",
             "back":"../Images/French/back.png"
+        },
+        "timesup_page":{
+            "times_up": "../Images/French/gameplay-timesup.png"
+        },
+        "gameover_page":{
+            "your_score":"../Images/French/gameplay-gameover"
         }
+    },
+    "highscore_page":{
+        "highscore_title": "../Images/French/highscore-board.png",
+        "back":"../Images/French/back.png"
     }
-]
+}

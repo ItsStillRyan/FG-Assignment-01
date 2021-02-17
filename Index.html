@@ -27,11 +27,11 @@
             </div>
         </div>
 
-        <div class=" main-logo">
+        <div class="main-logo">
             <div class="row">
 
                 <div class="col showcol text-center">
-                    <img src="../Images/Menu/logo.png" alt="">
+                    <img src="../Images/Menu/logo.png" id="titlemain" alt="">
                 </div>
             </div>
         </div>
@@ -44,7 +44,7 @@
 
                 <div class="col showcol text-center">
                     <button type="image" class="mBTN btn" id="playBTN">
-                        <img src="../Images/Menu/main-PlayButton.png" alt="">
+                        <img src="../Images/Menu/main-PlayButton.png" id="playmain" alt="">
                     </button>
                 </div>
 
@@ -81,21 +81,36 @@
 
 
 
-            <img usemap="#mathOperator" class="math-op" src="../../Images/Menu/clouds-only.png" alt="math-op-fp" />
+            <img usemap="#mathOperator" class="math-op" src="../../Images/Menu/clouds-only.png" alt="math-op-fp"/>
 
 
     </div>
 
     <div class="settings-screen">
 
-        <div class="container">
+        <div class="container audio-Controls">
             <div class="row">
                 <div class="col audio-toggle showcol text-center">
                     <audio controls autoplay loop>
                         <source src="../Additionals/Main-Mu.mp3" type="audio/mp3">
                     </audio>
                 </div>
+            </div>
+        </div>
 
+        <div class="container language-Toggle">
+            <div class="row">
+                <div class="col text-center showcol">
+                    <button class="btn englishBtn">
+                        <img src="Images/Languages/us-flag.png" alt="">
+                    </button>
+                </div>
+
+                <div class="col text-center showcol">
+                     <button class="btn frenchBtn">
+                        <img src="Images/Languages/french-flag.png" alt="">
+                    </button>
+                </div>
             </div>
         </div>
 
@@ -103,7 +118,7 @@
             <div class="row">
                 <div class="col showcol text-center">
                     <button type="image" class="btn" id="back-Btn">
-                        <img src="../Images/Menu/settings-BackButton.png" alt="" class="backBtn">
+                        <img src="../Images/Menu/settings-BackButton.png" alt="" class="backBtn" id="backBtn">
                     </button>
                 </div>
             </div>
@@ -112,6 +127,7 @@
 
 
     <!-- SCRIPTS UNDER HERE -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
         crossorigin="anonymous"></script>
