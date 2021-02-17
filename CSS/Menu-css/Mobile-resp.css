@@ -87,6 +87,9 @@ body{
 .back-Btn{
     margin-top: 7vh;
 }
+.main-buttons{ 
+    margin-top: 38vh;
+}
 }
 /* ---------------------------------------- */
 /* Mobile Medium - 5.8in */
@@ -123,6 +126,9 @@ body{
 .backBtn{
     margin-top: 10vh;
     width: 70%;
+}
+.main-buttons{ 
+    margin-top: 40vh;
 }
 }
 /* ---------------------------------------- */

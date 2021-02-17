@@ -45,6 +45,10 @@ var primaryTimer = window.setTimeout(timesUpScreen, 65000)
 var secondaryTimer = window.setTimeout(gameoverScreen, 68000)
 //Final Score END
 
+//start button transition
+document.querySelector('.clickStartBtn').addEventListener('click', function(){
+    displayToggle('.cover-start','.main-gameplay')
+})
 
 //gameover buttons transitions
 document.querySelector('#replayBTN').addEventListener('click', function(){
@@ -78,3 +82,4 @@ document.querySelector('#back-Btn').addEventListener('click',function(){
     displayToggle('.settings-screen','.pause-screen')
     screenChange(pausescreen)
 })
+

@@ -1,6 +1,6 @@
 //MAIN TIMER
 let startcount = 60;
-var pausedBool = false
+var pausedBool = true
 
 counter = setInterval(function(){
     if (!pausedBool) {
@@ -18,7 +18,18 @@ counter = setInterval(function(){
 
 
 
-//stopping the clock
+//starting the clock via inital click
+document.querySelector(".clickStartBtn").addEventListener('click', function(){
+    let newtime = parseInt(localStorage.getItem("timerStop"))
+    localStorage.setItem("timerCountdown", newtime)
+    window.setTimeout(timesUpScreen, (newtime * 1000))
+    window.setTimeout(gameoverScreen, ((newtime * 1000) + 5000))
+    pausedBool = false;
+    
+})
+
+
+//stopping the clock via pause
 document.querySelector("#pauseBtn").addEventListener('click', function () {
     //collecting last known time + clearing current timeouts
     localStorage.setItem("timerStop", startcount)
@@ -28,7 +39,7 @@ document.querySelector("#pauseBtn").addEventListener('click', function () {
 
 })
 
-//starting the clock
+//starting the clock via pause
 document.querySelector("#resumeBTN").addEventListener('click', function () {
     let newtime = parseInt(localStorage.getItem("timerStop"))
     localStorage.setItem("timerCountdown", newtime)

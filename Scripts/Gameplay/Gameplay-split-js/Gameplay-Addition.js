@@ -1,4 +1,13 @@
 //Functions
+function clicktest() {
+    console.log("hello")
+}
+
+function clicktest1() {
+    console.log("hello2")
+}
+
+
 //Number Generators
 function numberGen(maxNum) {
     let x = Math.floor((Math.random() * maxNum) + 1);
@@ -49,6 +58,15 @@ function equationGen() {
     }
 }
 
+//starting clock on highscore implementations
+function highscoreClock() {
+    //replacing highscore in database
+    window.setTimeout(function () {
+        let finalAdd = localStorage.getItem('additionHighscore')
+        document.querySelector('.scoreAddition').innerHTML = finalAdd
+    }, 67000)
+}
+
 //creting an option array
 let scoreArray = []
 localStorage.setItem("additionHighscore", 3)
@@ -57,7 +75,7 @@ localStorage.setItem("additionHighscore", 3)
 //Option stones
 let x = document.querySelectorAll('.button-option').length
 for (let i = 0; i < x; i++) {
-    document.querySelectorAll('.button-option')[i].addEventListener('click', function () {
+    document.querySelectorAll('.clickStartBtn, .button-option')[i].addEventListener('click', function () {
         //numbers in button changer
         //numbergen + numbergen to shuffle number twice and prevent repeating numbers
         document.querySelector('.buttonNum1').innerHTML = numberGen(numberGen(60))
@@ -106,8 +124,5 @@ for (let i = 0; i < x; i++) {
 }
 
 
-//replacing highscore in database
-window.setTimeout(function(){
-    let finalAdd = localStorage.getItem('additionHighscore')
-    document.querySelector('.scoreAddition').innerHTML = finalAdd
-}, 67000)
+
+
