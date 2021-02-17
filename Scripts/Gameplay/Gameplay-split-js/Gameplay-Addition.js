@@ -64,65 +64,89 @@ function highscoreClock() {
     window.setTimeout(function () {
         let finalAdd = localStorage.getItem('additionHighscore')
         document.querySelector('.scoreAddition').innerHTML = finalAdd
-    }, 67000)
+    }, 65000)
 }
 
 //creting an option array
 let scoreArray = []
+
 localStorage.setItem("additionHighscore", 1)
 
 
 //Option stones
 let x = document.querySelectorAll('.button-option').length
-for (let i = 0; i < x; i++) {
-    document.querySelectorAll('.clickStartBtn, .button-option')[i].addEventListener('click', function () {
-        //numbers in button changer
-        //numbergen + numbergen to shuffle number twice and prevent repeating numbers
-        document.querySelector('.buttonNum1').innerHTML = numberGen(numberGen(60))
-        document.querySelector('.buttonNum2').innerHTML = parseInt(randomBetween(6, 60)) - numberGen(5)
-        document.querySelector('.buttonNum3').innerHTML = numberGen(numberGen(60))
-        document.querySelector('.buttonNum4').innerHTML = parseInt(randomBetween(8, 60)) - numberGen(7)
+document.querySelector('.clickStartBtn').addEventListener('click', function () {
+    for (let i = 0; i < x; i++) {
+        document.querySelectorAll('.button-option')[i].addEventListener('click', function () {
+            let wrongNum = []
+            //numbers in button changer
+            //numbergen + numbergen to shuffle number twice and prevent repeating numbers
+            document.querySelector('.buttonNum1').innerHTML = numberGen(numberGen(60))
+            wrongNum.push(document.querySelector('.buttonNum1').innerHTML)
 
-        document.querySelector('.btnTrig1').addEventListener('click', function () {
-            localStorage.setItem("btnTrig", "1");
+            document.querySelector('.buttonNum2').innerHTML = parseInt(randomBetween(6, 60)) - numberGen(5)
+            wrongNum.push(document.querySelector('.buttonNum2').innerHTML)
+
+            document.querySelector('.buttonNum3').innerHTML = numberGen(numberGen(60))
+            wrongNum.push(document.querySelector('.buttonNum3').innerHTML)
+
+            document.querySelector('.buttonNum4').innerHTML = parseInt(randomBetween(8, 60)) - numberGen(7)
+            wrongNum.push(document.querySelector('.buttonNum4').innerHTML)
+
+            console.log(wrongNum)
+
+            document.querySelector('.btnTrig1').addEventListener('click', function () {
+                localStorage.setItem("btnTrig", "1");
+            })
+            document.querySelector('.btnTrig2').addEventListener('click', function () {
+                localStorage.setItem("btnTrig", "2");
+            })
+            document.querySelector('.btnTrig3').addEventListener('click', function () {
+                localStorage.setItem("btnTrig", "3");
+            })
+            document.querySelector('.btnTrig4').addEventListener('click', function () {
+                localStorage.setItem("btnTrig", "4");
+            })
+
+            //creating an array to store the random placements of correct answer
+            y = equationGen()
+            scoreArray.unshift(y.scoreCount)
+            console.log(scoreArray)
+            localStorage.setItem("lastPlacement", scoreArray[2])
+
+            let answerValue = localStorage.getItem("lastPlacement")
+            let triggerValue = localStorage.getItem("btnTrig")
+
+            console.log("button number", triggerValue)
+            console.log("random placement", answerValue)
+
+            //cutoff for array
+            if (scoreArray.length > 5) {
+                scoreArray.pop()
+            }
+
+
+            if (triggerValue == answerValue) {
+                let scoreIncrement = parseInt(localStorage.getItem("additionHighscore"))
+                localStorage.setItem("additionHighscore", ++scoreIncrement)
+                console.log(scoreIncrement)
+            }
+
+            //catching duplicates
+            //    if (y.finalAns == wrongNum[0]){
+            //         document.querySelector('.buttonNum1').innerHTML = numberGen(numberGen(60))
+            //    }else if (y.finalAns == wrongNum[1]){
+            //         document.querySelector('.buttonNum2').innerHTML = parseInt(randomBetween(6, 60)) - numberGen(5)
+            //    }else if(y.finalAns == wrongNum[2]){
+            //         document.querySelector('.buttonNum3').innerHTML = numberGen(numberGen(60))
+            //    }else if(y.finalAns == wrongNum[3]){
+            //         document.querySelector('.buttonNum4').innerHTML = parseInt(randomBetween(8, 60)) - numberGen(7)
+            //    }
+
         })
-        document.querySelector('.btnTrig2').addEventListener('click', function () {
-            localStorage.setItem("btnTrig", "2");
-        })
-        document.querySelector('.btnTrig3').addEventListener('click', function () {
-            localStorage.setItem("btnTrig", "3");
-        })
-        document.querySelector('.btnTrig4').addEventListener('click', function () {
-            localStorage.setItem("btnTrig", "4");
-        })
 
-        //creating an array to store the random placements of correct answer
-        y = equationGen()
-        scoreArray.unshift(y.scoreCount)
-        console.log(scoreArray)
-        localStorage.setItem("lastPlacement", scoreArray[2])
-
-        let answerValue = localStorage.getItem("lastPlacement")
-        let triggerValue = localStorage.getItem("btnTrig")
-
-        console.log("button number", triggerValue)
-        console.log("random placement", answerValue)
-
-        //cutoff for array
-        if (scoreArray.length > 5) {
-            scoreArray.pop()
-        }
-
-
-        if (triggerValue == answerValue) {
-            let scoreIncrement = parseInt(localStorage.getItem("additionHighscore"))
-            localStorage.setItem("additionHighscore", ++scoreIncrement)
-            console.log(scoreIncrement)
-        }
-    })
-
-}
-
+    }
+})
 
 
 

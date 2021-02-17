@@ -56,7 +56,7 @@ function highscoreClock() {
     window.setTimeout(function () {
         let finalAdd = localStorage.getItem('subtractionHighscore')
         document.querySelector('.scoreSubtraction').innerHTML = finalAdd
-    }, 67000)
+    }, 65000)
 }
 
 //creting an option array
