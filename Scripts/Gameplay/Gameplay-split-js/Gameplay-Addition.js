@@ -69,7 +69,7 @@ function highscoreClock() {
 
 //creting an option array
 let scoreArray = []
-localStorage.setItem("additionHighscore", 3)
+localStorage.setItem("additionHighscore", 1)
 
 
 //Option stones

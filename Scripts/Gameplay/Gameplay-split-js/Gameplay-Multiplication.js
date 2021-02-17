@@ -44,7 +44,7 @@ function equationGen() {
     localStorage.setItem("currentPlacement", x)
     return {
         'scoreCount': x,
-        'finalAns': finalAns
+        'finalAns': finalAnss
 
     }
 
@@ -52,9 +52,9 @@ function equationGen() {
 
 //creting an option array
 let scoreArray = []
-localStorage.setItem("multiplicationsHighscore", 3)
+localStorage.setItem("multiplicationsHighscore", 1)
 //Option stones
-let x = document.querySelectorAll('.button-option').length
+let x = document.querySelectorAll('.clickStartBtn, .button-option').length
 for (let i = 0; i < x; i++) {
     document.querySelectorAll('.button-option')[i].addEventListener('click', function () {
         //numbers in button changer

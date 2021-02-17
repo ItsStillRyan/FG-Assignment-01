@@ -67,9 +67,9 @@ function equationGen() {
 
     
 let scoreArray = []
-localStorage.setItem("divisionHighscore", 3)
+localStorage.setItem("divisionHighscore", 1)
 //Option stones
-let x = document.querySelectorAll('.button-option').length
+let x = document.querySelectorAll('.clickStartBtn, .button-option').length
 for (let i = 0; i < x; i++){
     document.querySelectorAll('.button-option')[i].addEventListener('click', function(){
         //numbers in button changer

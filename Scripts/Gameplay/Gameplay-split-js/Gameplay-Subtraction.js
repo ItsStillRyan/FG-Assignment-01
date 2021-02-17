@@ -52,11 +52,11 @@ function equationGen() {
 
 //creting an option array
 let scoreArray = []
-localStorage.setItem("subtractionHighscore", 3)
+localStorage.setItem("subtractionHighscore", 1)
 //Option stones // making querySelectorAll work
 let x = document.querySelectorAll('.button-option').length
 for (let i = 0; i < x; i++) {
-    document.querySelectorAll('.button-option')[i].addEventListener('click', function () {
+    document.querySelectorAll('.clickStartBtn, .button-option')[i].addEventListener('click', function () {
 
         //Wrong answer generators + outputting them into the stones
         document.querySelector('.buttonNum1').innerHTML = numberGen(numberGen(30))
