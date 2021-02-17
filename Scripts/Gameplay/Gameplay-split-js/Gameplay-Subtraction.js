@@ -50,6 +50,15 @@ function equationGen() {
 
 }
 
+function highscoreClock() {
+
+    //replacing highscore in database
+    window.setTimeout(function () {
+        let finalAdd = localStorage.getItem('subtractionHighscore')
+        document.querySelector('.scoreSubtraction').innerHTML = finalAdd
+    }, 67000)
+}
+
 //creting an option array
 let scoreArray = []
 localStorage.setItem("subtractionHighscore", 1)
@@ -89,7 +98,7 @@ for (let i = 0; i < x; i++) {
         let triggerValue = localStorage.getItem("btnTrig")
 
         //cutoff for array
-        if(scoreArray.length > 5){
+        if (scoreArray.length > 5) {
             scoreArray.pop()
         }
 
@@ -97,13 +106,8 @@ for (let i = 0; i < x; i++) {
         if (triggerValue == answerValue) {
             let scoreIncrement = parseInt(localStorage.getItem("subtractionHighscore"))
             localStorage.setItem("subtractionHighscore", ++scoreIncrement)
-            }
+        }
     })
 }
 
 
-//replacing highscore in database
-window.setTimeout(function(){
-    let finalAdd = localStorage.getItem('subtractionHighscore')
-    document.querySelector('.scoreSubtraction').innerHTML = finalAdd
-}, 67000)

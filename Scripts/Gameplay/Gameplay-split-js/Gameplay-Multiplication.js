@@ -44,9 +44,18 @@ function equationGen() {
     localStorage.setItem("currentPlacement", x)
     return {
         'scoreCount': x,
-        'finalAns': finalAnss
+        'finalAns': finalAns
 
     }
+
+}
+
+function highscoreClock() {
+    //replacing highscore in database
+    window.setTimeout(function () {
+        let finalAdd = localStorage.getItem('multiplicationsHighscore')
+        document.querySelector('.scoreMultiply').innerHTML = finalAdd
+    }, 67000)
 
 }
 
@@ -54,12 +63,12 @@ function equationGen() {
 let scoreArray = []
 localStorage.setItem("multiplicationsHighscore", 1)
 //Option stones
-let x = document.querySelectorAll('.clickStartBtn, .button-option').length
+let x = document.querySelectorAll('.button-option').length
 for (let i = 0; i < x; i++) {
-    document.querySelectorAll('.button-option')[i].addEventListener('click', function () {
+    document.querySelectorAll('.clickStartBtn, .button-option')[i].addEventListener('click', function () {
         //numbers in button changer
         //numbergen + numbergen to shuffle number twice and prevent repeating numbers
-        
+
         document.querySelector('.buttonNum1').innerHTML = numberGen(numberGen(120))
         document.querySelector('.buttonNum2').innerHTML = parseInt(randomBetween(1, 90)) + numberGen(5)
         document.querySelector('.buttonNum3').innerHTML = numberGen(numberGen(120))
@@ -92,7 +101,7 @@ for (let i = 0; i < x; i++) {
         console.log("random placement", answerValue)
 
         //cutoff for array
-        if(scoreArray.length > 5){
+        if (scoreArray.length > 5) {
             scoreArray.pop()
         }
 
@@ -105,8 +114,3 @@ for (let i = 0; i < x; i++) {
     })
 }
 
-//replacing highscore in database
-window.setTimeout(function(){
-    let finalAdd = localStorage.getItem('multiplicationsHighscore')
-    document.querySelector('.scoreMultiply').innerHTML = finalAdd
-}, 67000)

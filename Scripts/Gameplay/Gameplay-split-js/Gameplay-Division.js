@@ -26,14 +26,14 @@ function placementGen() {
     }
 }
 
-function equationGenDivision(){
-    let a = parseInt(randomBetween(15,30))
-    let b = parseInt(randomBetween(1,15))
-    while(a % b != 0){
-        a = parseInt(randomBetween(15,30))
-        b = parseInt(randomBetween(1,15))
+function equationGenDivision() {
+    let a = parseInt(randomBetween(15, 30))
+    let b = parseInt(randomBetween(1, 15))
+    while (a % b != 0) {
+        a = parseInt(randomBetween(15, 30))
+        b = parseInt(randomBetween(1, 15))
     }
-    return{
+    return {
         'Num1': a,
         'Num2': b
     }
@@ -47,7 +47,7 @@ function equationGen() {
     document.querySelector('#eqNum1').innerHTML = eqNum1
     document.querySelector('#eqNum2').innerHTML = eqNum2
     //getting the final and correct answer
-    
+
 
     let finalAns = y.Num1 / y.Num2
     //getting the random placement
@@ -65,13 +65,25 @@ function equationGen() {
     }
 }
 
-    
+
+//starting clock on highscore implementations
+function highscoreClock() {
+    //replacing highscore in database
+    window.setTimeout(function () {
+        let finalAdd = localStorage.getItem('divisionHighscore')
+        document.querySelector('.scoreDivision').innerHTML = finalAdd
+    }, 67000)
+
+}
+
+
+
 let scoreArray = []
 localStorage.setItem("divisionHighscore", 1)
 //Option stones
-let x = document.querySelectorAll('.clickStartBtn, .button-option').length
-for (let i = 0; i < x; i++){
-    document.querySelectorAll('.button-option')[i].addEventListener('click', function(){
+let x = document.querySelectorAll('.button-option').length
+for (let i = 0; i < x; i++) {
+    document.querySelectorAll('.clickStartBtn, .button-option')[i].addEventListener('click', function () {
         //numbers in button changer
         //numbergen + numbergen to shuffle number twice and prevent repeating numbers
         document.querySelector('.buttonNum1').innerHTML = numberGen(numberGen(30))
@@ -79,7 +91,7 @@ for (let i = 0; i < x; i++){
         document.querySelector('.buttonNum3').innerHTML = numberGen(numberGen(30))
         document.querySelector('.buttonNum4').innerHTML = parseInt(randomBetween(8, 31)) - numberGen(7)
 
-         //buttonclicks to store value of button position
+        //buttonclicks to store value of button position
         document.querySelector('.btnTrig1').addEventListener('click', function () {
             localStorage.setItem("btnTrig", "1");
         })
@@ -106,7 +118,7 @@ for (let i = 0; i < x; i++){
         console.log("random placement", answerValue)
 
         //cutoff for array
-        if(scoreArray.length > 5){
+        if (scoreArray.length > 5) {
             scoreArray.pop()
         }
 
@@ -121,7 +133,3 @@ for (let i = 0; i < x; i++){
 
 
 //replacing highscore in database
-window.setTimeout(function(){
-    let finalAdd = localStorage.getItem('divisionHighscore')
-    document.querySelector('.scoreDivision').innerHTML = finalAdd
-}, 67000)
