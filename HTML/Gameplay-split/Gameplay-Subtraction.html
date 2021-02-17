@@ -13,7 +13,7 @@
 <body>
     
     <div class="cover-start">
-        <a class="btn clickStartBtn" onclick="highscoreClock()">
+        <a class="btn clickStartBtn" onclick="highscoreClock(); resumeMusic()">
             <img src="../../Images/Gameplay/black.png" class="coverImg" style="width:100%;">
             <p class="startText">CLICK TO START!</p>
         </a>
@@ -133,7 +133,7 @@
         <div class="container">
             <div class="row">
                 <div class="col audio-toggle showcol text-center">
-                    <audio controls autoplay id="gameplayAudio">
+                    <audio controls id="gameplayAudio">
                         <source src="../../Additionals/Gameplay-Mu.mp3" type="audio/mp3">
                     </audio>
                 </div>

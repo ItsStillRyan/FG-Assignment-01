@@ -20,10 +20,8 @@ counter = setInterval(function(){
 
 //starting the clock via inital click
 document.querySelector(".clickStartBtn").addEventListener('click', function(){
-    let newtime = parseInt(localStorage.getItem("timerStop"))
-    localStorage.setItem("timerCountdown", newtime)
-    window.setTimeout(timesUpScreen, (newtime * 1000))
-    window.setTimeout(gameoverScreen, ((newtime * 1000) + 5000))
+    primaryTimer = window.setTimeout(timesUpScreen, 65000)
+    secondaryTimer = window.setTimeout(gameoverScreen, 68000)
     pausedBool = false;
     
 })

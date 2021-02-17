@@ -38,11 +38,11 @@ document.querySelector('#pauseBtn').addEventListener('click', function()
 })
 
 //Times up screen
-var primaryTimer = window.setTimeout(timesUpScreen, 65000)
+var primaryTimer
 //Times Up screen END
 
 //Final Score
-var secondaryTimer = window.setTimeout(gameoverScreen, 68000)
+var secondaryTimer
 //Final Score END
 
 //start button transition

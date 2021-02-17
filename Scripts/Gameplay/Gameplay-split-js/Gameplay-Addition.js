@@ -64,7 +64,7 @@ function highscoreClock() {
     window.setTimeout(function () {
         let finalAdd = localStorage.getItem('additionHighscore')
         document.querySelector('.scoreAddition').innerHTML = finalAdd
-    }, 62000)
+    }, 64000)
 }
 
 //creting an option array
@@ -93,8 +93,6 @@ document.querySelector('.clickStartBtn').addEventListener('click', function () {
             document.querySelector('.buttonNum4').innerHTML = parseInt(randomBetween(8, 60)) - numberGen(7)
             wrongNum.push(document.querySelector('.buttonNum4').innerHTML)
 
-            console.log(wrongNum)
-
             document.querySelector('.btnTrig1').addEventListener('click', function () {
                 localStorage.setItem("btnTrig", "1");
             })
@@ -110,16 +108,23 @@ document.querySelector('.clickStartBtn').addEventListener('click', function () {
 
             //creating an array to store the random placements of correct answer
             y = equationGen()
+
+            // catching duplicates
+            // if (y.finalAns == wrongNum[0]) {
+            //     document.querySelector('.buttonNum1').innerHTML = numberGen(numberGen(60))
+            // } else if (y.finalAns == wrongNum[1]) {
+            //     document.querySelector('.buttonNum2').innerHTML = parseInt(randomBetween(6, 60)) - numberGen(5)
+            // } else if (y.finalAns == wrongNum[2]) {
+            //     document.querySelector('.buttonNum3').innerHTML = numberGen(numberGen(60))
+            // } else if (y.finalAns == wrongNum[3]) {
+            //     document.querySelector('.buttonNum4').innerHTML = parseInt(randomBetween(8, 60)) - numberGen(7)
+            // }
+
             scoreArray.unshift(y.scoreCount)
-            console.log(scoreArray)
             localStorage.setItem("lastPlacement", scoreArray[2])
 
             let answerValue = localStorage.getItem("lastPlacement")
             let triggerValue = localStorage.getItem("btnTrig")
-
-            console.log("button number", triggerValue)
-            console.log("random placement", answerValue)
-
             //cutoff for array
             if (scoreArray.length > 5) {
                 scoreArray.pop()
@@ -132,16 +137,7 @@ document.querySelector('.clickStartBtn').addEventListener('click', function () {
                 console.log(scoreIncrement)
             }
 
-            // catching duplicates
-               if (y.finalAns == wrongNum[0]){
-                    document.querySelector('.buttonNum1').innerHTML = numberGen(numberGen(60))
-               }else if (y.finalAns == wrongNum[1]){
-                    document.querySelector('.buttonNum2').innerHTML = parseInt(randomBetween(6, 60)) - numberGen(5)
-               }else if(y.finalAns == wrongNum[2]){
-                    document.querySelector('.buttonNum3').innerHTML = numberGen(numberGen(60))
-               }else if(y.finalAns == wrongNum[3]){
-                    document.querySelector('.buttonNum4').innerHTML = parseInt(randomBetween(8, 60)) - numberGen(7)
-               }
+
 
         })
 

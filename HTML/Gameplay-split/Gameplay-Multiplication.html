@@ -13,7 +13,7 @@
 <body>
 
     <div class="cover-start">
-        <a class="btn clickStartBtn" onclick="highscoreClock()">
+        <a class="btn clickStartBtn" onclick="highscoreClock(); resumeMusic()">
             <img src="../../Images/Gameplay/black.png" class="coverImg" style="width:100%;">
             <p class="startText">CLICK TO START!</p>
         </a>
@@ -131,53 +131,10 @@
 
     <div class="settings-screen">
 
-        <!-- <div class="container music-toggle">
-            <div class="row">
-
-                <div class="col showcol">
-                    <p>MUSIC</p>
-                </div>
-
-                <div class="col showcol">
-                    <button type="image" class="btn settingsBtn" id="volBTN">
-                        <img src="../../Images/Menu/Volume-Toggle/volume-On.png" alt="" class="settingsBtn">
-                    </button>
-                </div>
-
-                <div class="col showcol">
-                    <button type="image" class="btn settingsBtn" id="volBTN">
-                        <img src="../../Images/Menu/Volume-Toggle/mute-Off.png" alt="" class="settingsBtn">
-                    </button>
-                </div>
-            </div>
-        </div>
-
-        <div class="container sfx-toggle">
-
-            <div class="row">
-
-                <div class="col showcol">
-                    <p>SFX</p>
-                </div>
-
-                <div class="col showcol">
-                    <button type="image" class="btn settingsBtn" id="volBTN">
-                        <img src="../../Images/Menu/Volume-Toggle/volume-On.png" alt="" class="settingsBtn">
-                    </button>
-                </div>
-
-                <div class="col showcol">
-                    <button type="image" class="btn settingsBtn" id="volBTN">
-                        <img src="../../Images/Menu/Volume-Toggle/mute-Off.png" alt="" class="settingsBtn">
-                    </button>
-                </div>
-            </div>
-        </div> -->
-
         <div class="container">
             <div class="row">
                 <div class="col audio-toggle showcol text-center">
-                    <audio controls autoplay id="gameplayAudio">
+                    <audio controls id="gameplayAudio">
                         <source src="../../Additionals/Gameplay-Mu.mp3" type="audio/mp3">
                     </audio>
                 </div>
