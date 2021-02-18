@@ -1,3 +1,35 @@
+//FUNCTIONS 
+function pauseMusic(){
+    audioSource.pause()
+}
+function resumeMusic(){
+    audioSource.play()
+}
+
+function languageSwap(response) {
+    let selectedLanguage = localStorage.getItem("languageSelected")
+
+    let resumeFR = document.querySelector('#resumeGP')
+    let quitFR = document.querySelector('#quitGP')
+    let timesUpFR = document.querySelector('#timesupimg')
+    let gameoverFR = document.querySelector('#bannerGO')
+
+    if (selectedLanguage == "FR") {
+        document.querySelector('.startText').innerHTML = "cliquez pour commencer! >> <<"
+        resumeFR.src = response.data.FR.resume
+        quitFR.src = response.data.FR.quit
+        timesUpFR.src = response.data.FR.times_up
+        gameoverFR.src = response.data.FR.gameover
+     
+    } else if (selectedLanguage == "EN") {
+        document.querySelector('.startText').innerHTML = "CLICK TO START! >> <<"
+        resumeFR.src = response.data.EN.resume
+        quitFR.src = response.data.EN.quit
+        timesUpFR.src = response.data.EN.times_up
+        gameoverFR.src = response.data.EN.gameover
+    }
+}
+
 //MAIN TIMER
 let startcount = 60;
 var pausedBool = true
@@ -50,10 +82,11 @@ document.querySelector("#resumeBTN").addEventListener('click', function () {
 //audio pause 
 var audioSource = document.querySelector('#gameplayAudio')
 
-function pauseMusic(){
-    audioSource.pause()
-}
-function resumeMusic(){
-    audioSource.play()
-}
 
+//translator
+
+async function pageReturn(){
+    let response = await axios.get('/JSON/French.json')
+    console.log(response.data.EN.title, "is this working?") 
+    languageSwap(response)
+}pageReturn()

@@ -1,26 +1,25 @@
 {
     "FR":{
-        "title":"../Images/French/main_title.png",
-        "play_button":"../Images/French/main-play.png",
+        "title":"../../Images/French/main_title.png",
+        "play_button":"../../Images/French/main-play.png",
         "operations_select":"../Images/French/math-op.png",
-        "back":"../Images/French/back.png",
-        "resume":"../Images/French/pause-resume.png",
-        "quit":"../Images/French/pause-quit.png",
-        "times_up":"../Images/French/gameplay-timesup.png",
-        "gameover":"../Images/French/gameplay-gameover",
-        "HS_board":"../Images/French/highscore-board.png"
-        
+        "back":"../../Images/French/back.png",
+        "resume":"../../Images/French/pause-resume.png",
+        "quit":"../../Images/French/pause-quit.png",
+        "times_up":"../../Images/French/gameplay-timesup.png",
+        "gameover":"../../Images/French/gameplay-gameover.png",
+        "HS_board":"../../Images/French/highscore-board.png"
     },
     "EN":{
-        "title": "../Images/Menu/logo.png",
-        "play_button":"../Images/Menu/main-PlayButton.png",
-        "operations_select":"../Images/Menu/clouds-only.png",
-        "back":"../Images/Menu/settings-BackButton.png",
-        "resume":"../Image/Gameplay/pause-Resume.png",
-        "quit":"../Image/Gameplay/pause-Quit.png",
-        "times_up":"../Image/Gameplay/timesup-logo.png",
-        "gameover":"../Image/Gameplay/Gameover-board.png",
-        "HS_board":"../Image/Highscore/scoreboard.png"
+        "title": "../../Images/Menu/logo.png",
+        "play_button":"../../Images/Menu/main-PlayButton.png",
+        "operations_select":"../../Images/Menu/clouds-only.png",
+        "back":"../../Images/Menu/settings-BackButton.png",
+        "resume":"../../Images/Gameplay/pause-Resume.png",
+        "quit":"../../Images/Gameplay/pause-Quit.png",
+        "times_up":"../../Images/Gameplay/timesup-logo.png",
+        "gameover":"../../Images/Gameplay/Gameover-board.png",
+        "HS_board":"../../Images/Highscore/scoreboard.png"
         
     }
 }

@@ -22,7 +22,11 @@ body{
 .back-button{
     margin-top: 10px;
     text-align: center;
+    
 }
+/* #backBtn{
+    width: 200px;
+} */
 .scoreList{
     position: absolute;
     top: 60%;

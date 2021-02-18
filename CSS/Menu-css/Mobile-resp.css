@@ -14,8 +14,9 @@ body{
 .main-logo{
    margin-top: 2vh;
 }   
-.main-logo img{
-   width: 40vh;
+#titlemain{
+   width: 45vh;
+   margin-top: 5vh;
 }
 .main-buttons{ 
     margin-top: 35vh;
@@ -24,6 +25,10 @@ body{
     margin-top: 15px;
     padding:0;
 }
+#playmain{
+    width: 200px;
+}
+
 /* MAIN MENU PAGE END*/ 
 
 /* SETTINGS PAGE*/
