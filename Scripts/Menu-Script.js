@@ -8,6 +8,27 @@ function displayToggle(screen1, screen2) {
     document.querySelector(screen2).style.cssText = `display: block`
 }
 
+function languageSwap(response) {
+    let selectedLanguage = localStorage.getItem("languageSelected")
+    let titleFR = document.querySelector("#titlemain")
+    let playFR = document.querySelector("#playmain")
+    let OperationsFR = document.querySelector(".math-op")
+    // let settingsFR = document.querySelector("#titlemain") 
+    let backFR = document.querySelector("#backBtn")
+
+    if (selectedLanguage == "FR") {
+        titleFR.src = response.data.FR.title
+        playFR.src = response.data.FR.play_button
+        OperationsFR.src = response.data.FR.operations_select
+        backFR.src = response.data.FR.back
+    } else if (selectedLanguage == "EN") {
+        titleFR.src = response.data.EN.title
+        playFR.src = response.data.EN.play_button
+        OperationsFR.src = response.data.EN.operations_select
+        backFR.src = response.data.EN.back
+    }
+}
+
 //Main Menu
 //Play button
 document.querySelector('#playBTN').addEventListener('click', function () {
@@ -36,41 +57,28 @@ document.querySelector('#highscoreBTN').addEventListener('click', function () {
 document.querySelector(".frenchBtn").addEventListener('click', async function () {
     localStorage.setItem("languageSelected", "FR")
     let response = await axios.get('/JSON/French.json')
-    console.log(response.data.main_menu.play_button)
-
-    let titleFR = document.querySelector("#titlemain")
-    let playFR = document.querySelector("#playmain")
-    let OperationsFR = document.querySelector(".math-op")
- // let settingsFR = document.querySelector("#titlemain") 
-    let backFR = document.querySelector("#backBtn")
-
-    if (selectedLanguage == "FR") {
-        titleFR.src = response.data.main_menu.title
-        playFR.src = response.data.main_menu.play_button
-        OperationsFR.src = response.data.main_menu.operations_select
-        backFR.src = response.data.gameplay.pause_page.back
-    } else if (selectedLanguage == "EN"){
-        titleFR.src = response.data.main_menu.title
-        playFR.src = response.data.main_menu.play_button
-        OperationsFR.src = response.data.main_menu.operations_select
-        backFR.src = response.data.gameplay.pause_page.back
-    }
-
-
-
+    console.log(response.data.FR.title)
+    languageSwap(response)
 
 })
-document.querySelector(".englishBtn").addEventListener('click', function () {
+document.querySelector(".englishBtn").addEventListener('click', async function () {
     localStorage.setItem("languageSelected", "EN")
+    let response = await axios.get('/JSON/French.json')
+    console.log(response.data.EN.title)
+    languageSwap(response)
+
 })
 
+async function pageReturn(){
+    let response = await axios.get('/JSON/French.json')
+    console.log(response.data.EN.title, "is this working?") 
+    languageSwap(response)
+}pageReturn()
 
-let selectedLanguage = localStorage.getItem("languageSelected")
 
-async function getData() {
 
-}
-getData()
+
+
 
 
 
