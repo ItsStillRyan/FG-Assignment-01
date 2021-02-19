@@ -92,3 +92,10 @@ async function pageReturn(){
     console.log(response.data.EN.title, "is this working?") 
     languageSwap(response)
 }pageReturn()
+
+
+//geoff image goal changer
+// let plus = localStorage.getItem("additionHighscore")
+// let minus = localStorage.getItem("subtractionHighscore")
+// let times = localStorage.getItem("multiplicationsHighscore")
+// let divide = localStorage.getItem("divisionHighscore")
