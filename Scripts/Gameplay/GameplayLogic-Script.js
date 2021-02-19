@@ -52,7 +52,6 @@ counter = setInterval(function(){
 }, 1000)
 
 
-
 //starting the clock via inital click
 document.querySelector(".clickStartBtn").addEventListener('click', function(){
     primaryTimer = window.setTimeout(timesUpScreen, 65000)
