@@ -129,6 +129,18 @@ document.querySelector('.clickStartBtn').addEventListener('click', function () {
                 localStorage.setItem("divisionHighscore", ++scoreIncrement)
                 console.log(scoreIncrement)
             }
+
+            //geoff image goal changer
+            let plus = localStorage.getItem("divisionHighscore")
+            console.log("scoreup", plus)
+
+            let addSprite = document.querySelector('#geoff-sprite-img')
+            if (plus > 0 && plus < 15) {
+                addSprite.src = "../../Images/Gameplay/geoff-small.png"
+            } else if (plus > 16) {
+                addSprite.src = "../../Images/Gameplay/geoff-medium.png"
+                addSprite.style.width = "48%"
+            }
         })
     }
 })

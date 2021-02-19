@@ -14,10 +14,11 @@ function languageSwap(response) {
     let timesUpFR = document.querySelector('#timesupimg')
     let gameoverFR = document.querySelector('#bannerGO')
     let backFR = document.querySelector('.backBtn')
-    let pauseFR = document.querySelector('.pause-screen')
+  
 
     if (selectedLanguage == "FR") {
         document.querySelector('.startText').innerHTML = "cliquez pour commencer! >> <<"
+        document.querySelector('.startText').style.fontSize = "2.5em"
         resumeFR.src = response.data.FR.resume
         quitFR.src = response.data.FR.quit
         timesUpFR.src = response.data.FR.times_up

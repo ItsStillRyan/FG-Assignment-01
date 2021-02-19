@@ -19,7 +19,6 @@
         "quit":"../../Images/Gameplay/pause-Quit.png",
         "times_up":"../../Images/Gameplay/timesup-logo.png",
         "gameover":"../../Images/Gameplay/Gameover-board.png",
-        "HS_board":"../../Images/Highscore/scoreboard.png"
-        
+        "HS_board":"../../Images/Highscore/scoreboard.png"  
     }
 }
