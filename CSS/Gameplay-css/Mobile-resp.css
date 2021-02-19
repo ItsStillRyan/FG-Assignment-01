@@ -186,6 +186,7 @@ body{
 #geoff-sprite-img {
   animation: shake 10s;
   animation-iteration-count: infinite;
+  
 }
 
 @keyframes shake {

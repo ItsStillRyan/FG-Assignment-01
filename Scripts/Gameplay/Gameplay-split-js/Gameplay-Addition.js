@@ -66,12 +66,13 @@ let scoreArray = []
 localStorage.setItem("additionHighscore", 1)
 
 
+
 //Option stones
 let x = document.querySelectorAll('.button-option').length
 document.querySelector('.clickStartBtn').addEventListener('click', function () {
     for (let i = 0; i < x; i++) {
         document.querySelectorAll('.button-option')[i].addEventListener('click', function () {
-             y = equationGen()
+            y = equationGen()
             //numbers in button changer
             document.querySelector('.buttonNum1').innerHTML = parseInt(y.finalAns + (randomBetween(5, 13)))
             document.querySelector('.buttonNum2').innerHTML = parseInt(y.finalAns + (randomBetween(numberGen(4), numberGen(12))))
@@ -92,7 +93,7 @@ document.querySelector('.clickStartBtn').addEventListener('click', function () {
             })
 
             //creating an array to store the random placements of correct answer
-           
+
             //getting the random placement
             let placement = placementGen()
             //outputting the answer with a random placement
@@ -101,7 +102,7 @@ document.querySelector('.clickStartBtn').addEventListener('click', function () {
             //showing what the random placement 1
             let x = placement.scoreCount
             localStorage.setItem("currentPlacement", x)
-            
+
             localStorage.setItem("answer", y.finalAns)
             scoreArray.unshift(x)
             localStorage.setItem("lastPlacement", scoreArray[2])
@@ -120,10 +121,18 @@ document.querySelector('.clickStartBtn').addEventListener('click', function () {
                 console.log(scoreIncrement)
             }
 
+            //geoff image goal changer
+            let plus = localStorage.getItem("additionHighscore")
+            console.log("scoreup",plus)
 
-
+            let addSprite = document.querySelector('#geoff-sprite-img')
+            if (plus > 0 && plus < 15) {
+                addSprite.src = "../../Images/Gameplay/geoff-small.png"
+            } else if (plus > 16) {
+                addSprite.src = "../../Images/Gameplay/geoff-medium.png"
+                addSprite.style.width = "30px"
+            }
         })
-
     }
 })
 
