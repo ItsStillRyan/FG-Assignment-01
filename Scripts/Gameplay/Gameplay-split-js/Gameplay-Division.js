@@ -27,11 +27,11 @@ function placementGen() {
 }
 
 function equationGenDivision() {
-    let a = parseInt(randomBetween(15, 30))
-    let b = parseInt(randomBetween(1, 15))
+    let a = parseInt(randomBetween(20, 50))
+    let b = parseInt(randomBetween(1, 20))
     while (a % b != 0) {
-        a = parseInt(randomBetween(15, 30))
-        b = parseInt(randomBetween(1, 15))
+        a = parseInt(randomBetween(20, 50))
+        b = parseInt(randomBetween(1, 20))
     }
     return {
         'Num1': a,
@@ -51,15 +51,15 @@ function equationGen() {
 
     let finalAns = y.Num1 / y.Num2
     //getting the random placement
-    let placement = placementGen()
-    //outputting the answer with a random placement
-    document.querySelector(placement.queryClass).innerHTML = finalAns
+    // let placement = placementGen()
+    // //outputting the answer with a random placement
+    // document.querySelector(placement.queryClass).innerHTML = finalAns
 
     //showing what the random placement 1
-    let x = placement.scoreCount
-    localStorage.setItem("currentPlacement", x)
+    // let x = placement.scoreCount
+    // localStorage.setItem("currentPlacement", x)
     return {
-        'scoreCount': x,
+        // 'scoreCount': x,
         'finalAns': finalAns
 
     }
@@ -86,13 +86,13 @@ let x = document.querySelectorAll('.button-option').length
 document.querySelector('.clickStartBtn').addEventListener('click', function () {
     for (let i = 0; i < x; i++) {
         document.querySelectorAll('.button-option')[i].addEventListener('click', function () {
-            y = equationGen()
             //numbers in button changer
             //numbergen + numbergen to shuffle number twice and prevent repeating numbers
-            document.querySelector('.buttonNum1').innerHTML = parseInt(y.finalAns + 3)
-            document.querySelector('.buttonNum2').innerHTML = parseInt(randomBetween(1, 12))
-            document.querySelector('.buttonNum3').innerHTML = parseInt(y.finalAns - 2)
-            document.querySelector('.buttonNum4').innerHTML = parseInt(randomBetween(20, 28))
+            y = equationGen()
+            document.querySelector('.buttonNum1').innerHTML = parseInt(y.finalAns - (randomBetween(5, 13)))
+            document.querySelector('.buttonNum2').innerHTML = parseInt(y.finalAns + (randomBetween(numberGen(4), numberGen(12))))
+            document.querySelector('.buttonNum3').innerHTML = parseInt(y.finalAns - (randomBetween(2, 5)))
+            document.querySelector('.buttonNum4').innerHTML = parseInt(y.finalAns + (randomBetween(numberGen(20), numberGen(47))))
 
             //buttonclicks to store value of button position
             document.querySelector('.btnTrig1').addEventListener('click', function () {
@@ -109,16 +109,22 @@ document.querySelector('.clickStartBtn').addEventListener('click', function () {
             })
 
             //creating an array to store the random placements of correct answer
-            
-            scoreArray.unshift(y.scoreCount)
-            console.log(scoreArray)
+
+            let placement = placementGen()
+            document.querySelector(placement.queryClass).innerHTML = y.finalAns
+            let x = placement.scoreCount
+            localStorage.setItem("currentPlacement", x)
+
+
+
+            localStorage.setItem("answer",y.finalAns)
+            scoreArray.unshift(x)
             localStorage.setItem("lastPlacement", scoreArray[2])
+
+            
 
             let answerValue = localStorage.getItem("lastPlacement")
             let triggerValue = localStorage.getItem("btnTrig")
-
-            console.log("button number", triggerValue)
-            console.log("random placement", answerValue)
 
             //cutoff for array
             if (scoreArray.length > 5) {

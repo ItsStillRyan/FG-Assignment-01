@@ -13,6 +13,7 @@ function languageSwap(response) {
     let quitFR = document.querySelector('#quitGP')
     let timesUpFR = document.querySelector('#timesupimg')
     let gameoverFR = document.querySelector('#bannerGO')
+    let backFR = document.querySelector('.backBtn')
 
     if (selectedLanguage == "FR") {
         document.querySelector('.startText').innerHTML = "cliquez pour commencer! >> <<"
@@ -20,6 +21,7 @@ function languageSwap(response) {
         quitFR.src = response.data.FR.quit
         timesUpFR.src = response.data.FR.times_up
         gameoverFR.src = response.data.FR.gameover
+        backFR.src = response.data.FR.back
      
     } else if (selectedLanguage == "EN") {
         document.querySelector('.startText').innerHTML = "CLICK TO START! >> <<"
@@ -27,6 +29,7 @@ function languageSwap(response) {
         quitFR.src = response.data.EN.quit
         timesUpFR.src = response.data.EN.times_up
         gameoverFR.src = response.data.EN.gameover
+        backFR.src = response.data.EN.back
     }
 }
 
