@@ -43,14 +43,7 @@ function equationGen() {
     document.querySelector('#eqNum2').innerHTML = eqNum2
     //getting the final and correct answer
     let finalAns = eqNum1 + eqNum2
-    //getting the random placement
-    let placement = placementGen()
-    //outputting the answer with a random placement
-    document.querySelector(placement.queryClass).innerHTML = finalAns
 
-    //showing what the random placement 1
-    let x = placement.scoreCount
-    localStorage.setItem("currentPlacement", x)
     return {
         'scoreCount': x,
         'finalAns': finalAns
@@ -78,19 +71,12 @@ let x = document.querySelectorAll('.button-option').length
 document.querySelector('.clickStartBtn').addEventListener('click', function () {
     for (let i = 0; i < x; i++) {
         document.querySelectorAll('.button-option')[i].addEventListener('click', function () {
-            let wrongNum = []
+             y = equationGen()
             //numbers in button changer
-            document.querySelector('.buttonNum1').innerHTML = numberGen(numberGen(60))
-            wrongNum.push(document.querySelector('.buttonNum1').innerHTML)
-
-            document.querySelector('.buttonNum2').innerHTML = parseInt(randomBetween(6, 60)) - numberGen(5)
-            wrongNum.push(document.querySelector('.buttonNum2').innerHTML)
-
-            document.querySelector('.buttonNum3').innerHTML = numberGen(numberGen(60))
-            wrongNum.push(document.querySelector('.buttonNum3').innerHTML)
-
-            document.querySelector('.buttonNum4').innerHTML = parseInt(randomBetween(8, 60)) - numberGen(7)
-            wrongNum.push(document.querySelector('.buttonNum4').innerHTML)
+            document.querySelector('.buttonNum1').innerHTML = parseInt(y.finalAns + (randomBetween(5, 13)))
+            document.querySelector('.buttonNum2').innerHTML = parseInt(y.finalAns + (randomBetween(numberGen(4), numberGen(12))))
+            document.querySelector('.buttonNum3').innerHTML = parseInt(y.finalAns + (randomBetween(2, 5)))
+            document.querySelector('.buttonNum4').innerHTML = parseInt(y.finalAns + (randomBetween(numberGen(20), numberGen(47))))
 
             document.querySelector('.btnTrig1').addEventListener('click', function () {
                 localStorage.setItem("btnTrig", "1");
@@ -106,24 +92,18 @@ document.querySelector('.clickStartBtn').addEventListener('click', function () {
             })
 
             //creating an array to store the random placements of correct answer
-            y = equationGen()
+           
+            //getting the random placement
+            let placement = placementGen()
+            //outputting the answer with a random placement
+            document.querySelector(placement.queryClass).innerHTML = y.finalAns
 
-            //catching duplicates
-            // if (y.finalAns == wrongNum[0]) {
-            //     document.querySelector('.buttonNum1').innerHTML = numberGen(numberGen(60))
-            //     wrongNum[0] = document.querySelector('.buttonNum1').innerHTML
-            // } else if (y.finalAns == wrongNum[1]) {
-            //     document.querySelector('.buttonNum2').innerHTML = parseInt(randomBetween(6, 60)) - numberGen(5)
-            //      wrongNum[1] = document.querySelector('.buttonNum2').innerHTML
-            // } else if (y.finalAns == wrongNum[2]) {
-            //     document.querySelector('.buttonNum3').innerHTML = numberGen(numberGen(60))
-            //      wrongNum[2] = document.querySelector('.buttonNum3').innerHTML
-            // } else if (y.finalAns == wrongNum[3]) {
-            //     document.querySelector('.buttonNum4').innerHTML = parseInt(randomBetween(8, 60)) - numberGen(7)
-            //      wrongNum[3] = document.querySelector('.buttonNum4').innerHTML
-            // }
-
-            scoreArray.unshift(y.scoreCount)
+            //showing what the random placement 1
+            let x = placement.scoreCount
+            localStorage.setItem("currentPlacement", x)
+            
+            localStorage.setItem("answer", y.finalAns)
+            scoreArray.unshift(x)
             localStorage.setItem("lastPlacement", scoreArray[2])
 
             let answerValue = localStorage.getItem("lastPlacement")

@@ -87,7 +87,6 @@ document.querySelector('.clickStartBtn').addEventListener('click', function () {
             //outputting the answer with a random placement
             document.querySelector(placement.queryClass).innerHTML = y.finalAns
 
-            //showing what the random placement 1
             let x = placement.scoreCount
             localStorage.setItem("currentPlacement", x)
 
