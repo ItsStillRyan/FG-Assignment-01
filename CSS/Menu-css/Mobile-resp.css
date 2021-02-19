@@ -25,9 +25,6 @@ body{
     margin-top: 15px;
     padding:0;
 }
-#playmain{
-    width: 200px;
-}
 
 /* MAIN MENU PAGE END*/ 
 
@@ -84,10 +81,10 @@ body{
     width: 70%;
 }
 .back-Btn{
-    margin-top: 7vh;
+    margin-top: 4vh;
 }
 .main-buttons{ 
-    margin-top: 38vh;
+    margin-top: 34vh;
 }
 }
 /* ---------------------------------------- */
@@ -123,7 +120,7 @@ body{
     
 }
 .backBtn{
-    margin-top: 10vh;
+    margin-top: 5vh;
     width: 70%;
 }
 .main-buttons{ 

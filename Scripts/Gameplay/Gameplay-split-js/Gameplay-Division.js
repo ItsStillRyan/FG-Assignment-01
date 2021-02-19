@@ -86,12 +86,13 @@ let x = document.querySelectorAll('.button-option').length
 document.querySelector('.clickStartBtn').addEventListener('click', function () {
     for (let i = 0; i < x; i++) {
         document.querySelectorAll('.button-option')[i].addEventListener('click', function () {
+            y = equationGen()
             //numbers in button changer
             //numbergen + numbergen to shuffle number twice and prevent repeating numbers
-            document.querySelector('.buttonNum1').innerHTML = numberGen(numberGen(30))
-            document.querySelector('.buttonNum2').innerHTML = parseInt(randomBetween(6, 31)) - numberGen(5)
-            document.querySelector('.buttonNum3').innerHTML = numberGen(numberGen(30))
-            document.querySelector('.buttonNum4').innerHTML = parseInt(randomBetween(8, 31)) - numberGen(7)
+            document.querySelector('.buttonNum1').innerHTML = parseInt(y.finalAns + 3)
+            document.querySelector('.buttonNum2').innerHTML = parseInt(randomBetween(1, 12))
+            document.querySelector('.buttonNum3').innerHTML = parseInt(y.finalAns - 2)
+            document.querySelector('.buttonNum4').innerHTML = parseInt(randomBetween(20, 28))
 
             //buttonclicks to store value of button position
             document.querySelector('.btnTrig1').addEventListener('click', function () {
@@ -108,7 +109,7 @@ document.querySelector('.clickStartBtn').addEventListener('click', function () {
             })
 
             //creating an array to store the random placements of correct answer
-            y = equationGen()
+            
             scoreArray.unshift(y.scoreCount)
             console.log(scoreArray)
             localStorage.setItem("lastPlacement", scoreArray[2])
