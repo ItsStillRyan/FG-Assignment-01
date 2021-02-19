@@ -50,14 +50,7 @@ function equationGen() {
 
 
     let finalAns = y.Num1 / y.Num2
-    //getting the random placement
-    // let placement = placementGen()
-    // //outputting the answer with a random placement
-    // document.querySelector(placement.queryClass).innerHTML = finalAns
-
-    //showing what the random placement 1
-    // let x = placement.scoreCount
-    // localStorage.setItem("currentPlacement", x)
+ 
     return {
         // 'scoreCount': x,
         'finalAns': finalAns
@@ -108,7 +101,6 @@ document.querySelector('.clickStartBtn').addEventListener('click', function () {
                 localStorage.setItem("btnTrig", "4");
             })
 
-            //creating an array to store the random placements of correct answer
 
             let placement = placementGen()
             document.querySelector(placement.queryClass).innerHTML = y.finalAns

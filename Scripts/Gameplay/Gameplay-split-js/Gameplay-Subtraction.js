@@ -34,16 +34,8 @@ function equationGen() {
     document.querySelector('#eqNum2').innerHTML = eqNum2
     //getting the final and correct answer
     let finalAns = eqNum1 - eqNum2
-    //getting the random placement
-    let placement = placementGen()
-    //outputting the answer with a random placement
-    document.querySelector(placement.queryClass).innerHTML = finalAns
 
-    //showing what the random placement 1
-    let x = placement.scoreCount
-    localStorage.setItem("currentPlacement", x)
     return {
-        'scoreCount': x,
         'finalAns': finalAns
 
     }
@@ -67,12 +59,12 @@ let x = document.querySelectorAll('.button-option').length
 document.querySelector('.clickStartBtn').addEventListener('click', function () {
     for (let i = 0; i < x; i++) {
         document.querySelectorAll('.button-option')[i].addEventListener('click', function () {
-
+             y = equationGen()
             //Wrong answer generators + outputting them into the stones
-            document.querySelector('.buttonNum1').innerHTML = numberGen(numberGen(30))
-            document.querySelector('.buttonNum2').innerHTML = parseInt(randomBetween(6, 31)) - numberGen(5)
-            document.querySelector('.buttonNum3').innerHTML = numberGen(numberGen(30))
-            document.querySelector('.buttonNum4').innerHTML = parseInt(randomBetween(8, 31)) - numberGen(7)
+            document.querySelector('.buttonNum1').innerHTML = parseInt(y.finalAns - (randomBetween(5, 13)))
+            document.querySelector('.buttonNum2').innerHTML = parseInt(y.finalAns + (randomBetween(numberGen(4), numberGen(12))))
+            document.querySelector('.buttonNum3').innerHTML = parseInt(y.finalAns - (randomBetween(2, 5)))
+            document.querySelector('.buttonNum4').innerHTML = parseInt(y.finalAns + (randomBetween(numberGen(20), numberGen(47))))
 
 
             //buttonclicks to store value of button position
@@ -89,10 +81,18 @@ document.querySelector('.clickStartBtn').addEventListener('click', function () {
                 localStorage.setItem("btnTrig", "4");
             })
 
-            //creating an array to store the random placements of correct answer
-            y = equationGen()
-            scoreArray.unshift(y.scoreCount)
-            console.log(scoreArray)
+
+            //getting the random placement
+            let placement = placementGen()
+            //outputting the answer with a random placement
+            document.querySelector(placement.queryClass).innerHTML = y.finalAns
+
+            //showing what the random placement 1
+            let x = placement.scoreCount
+            localStorage.setItem("currentPlacement", x)
+
+            localStorage.setItem("answer",y.finalAns)
+            scoreArray.unshift(x)
             localStorage.setItem("lastPlacement", scoreArray[2])
 
             let answerValue = localStorage.getItem("lastPlacement")
@@ -107,6 +107,7 @@ document.querySelector('.clickStartBtn').addEventListener('click', function () {
             if (triggerValue == answerValue) {
                 let scoreIncrement = parseInt(localStorage.getItem("subtractionHighscore"))
                 localStorage.setItem("subtractionHighscore", ++scoreIncrement)
+                console.log(scoreIncrement)
             }
         })
     }
