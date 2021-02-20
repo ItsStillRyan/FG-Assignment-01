@@ -104,25 +104,34 @@ document.querySelector('.clickStartBtn').addEventListener('click', function () {
             if (scoreArray.length > 5) {
                 scoreArray.pop()
             }
-
+            let plusOne1 = document.querySelector('#plusOne1')
 
             if (triggerValue == answerValue) {
                 let scoreIncrement = parseInt(localStorage.getItem("multiplicationsHighscore"))
                 localStorage.setItem("multiplicationsHighscore", ++scoreIncrement)
                 console.log(scoreIncrement)
+                //+1 animations
+                plusOne1.classList.add("PO-morsel");
+                plusOne1.classList.remove("PO-morsel");
+                void plusOne1.offsetWidth;
+                plusOne1.classList.add("PO-morsel");
             }
+            plusOne1.classList.add("PO-morsel");
 
             //geoff image goal changer
             let plus = localStorage.getItem("multiplicationsHighscore")
             console.log("scoreup", plus)
 
             let addSprite = document.querySelector('#geoff-sprite-img')
+            let buttonsTop = document.querySelector('.choicesBTN')
             if (plus > 0 && plus < 15) {
                 addSprite.src = "../../Images/Gameplay/geoff-small.png"
             } else if (plus > 16) {
+                console.log("is this working?")
                 addSprite.src = "../../Images/Gameplay/geoff-medium.png"
-                addSprite.style.width = "48%"
+                addSprite.style.width = "22vh"
+                buttonsTop.style.marginTop = "0px"
             }
-        })
+        }, false)
     }
 })

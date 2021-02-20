@@ -59,7 +59,7 @@ let x = document.querySelectorAll('.button-option').length
 document.querySelector('.clickStartBtn').addEventListener('click', function () {
     for (let i = 0; i < x; i++) {
         document.querySelectorAll('.button-option')[i].addEventListener('click', function () {
-             y = equationGen()
+            y = equationGen()
             //Wrong answer generators + outputting them into the stones
             document.querySelector('.buttonNum1').innerHTML = parseInt(y.finalAns - (randomBetween(5, 13)))
             document.querySelector('.buttonNum2').innerHTML = parseInt(y.finalAns + (randomBetween(numberGen(4), numberGen(12))))
@@ -90,7 +90,7 @@ document.querySelector('.clickStartBtn').addEventListener('click', function () {
             let x = placement.scoreCount
             localStorage.setItem("currentPlacement", x)
 
-            localStorage.setItem("answer",y.finalAns)
+            localStorage.setItem("answer", y.finalAns)
             scoreArray.unshift(x)
             localStorage.setItem("lastPlacement", scoreArray[2])
 
@@ -102,24 +102,35 @@ document.querySelector('.clickStartBtn').addEventListener('click', function () {
                 scoreArray.pop()
             }
 
-
+            let plusOne1 = document.querySelector('#plusOne1')
             if (triggerValue == answerValue) {
                 let scoreIncrement = parseInt(localStorage.getItem("subtractionHighscore"))
                 localStorage.setItem("subtractionHighscore", ++scoreIncrement)
                 console.log(scoreIncrement)
+
+                //+1 animations
+                plusOne1.classList.add("PO-morsel");
+                plusOne1.classList.remove("PO-morsel");
+                void plusOne1.offsetWidth;
+                plusOne1.classList.add("PO-morsel");
             }
+            plusOne1.classList.add("PO-morsel");
+
             //geoff image goal changer
             let plus = localStorage.getItem("subtractionHighscore")
             console.log("scoreup", plus)
 
             let addSprite = document.querySelector('#geoff-sprite-img')
+            let buttonsTop = document.querySelector('.choicesBTN')
             if (plus > 0 && plus < 15) {
                 addSprite.src = "../../Images/Gameplay/geoff-small.png"
             } else if (plus > 16) {
+                console.log("is this working?")
                 addSprite.src = "../../Images/Gameplay/geoff-medium.png"
-                addSprite.style.width = "48%"
+                addSprite.style.width = "22vh"
+                buttonsTop.style.marginTop = "0px"
             }
-        })
+        }, false)
     }
 
 })
