@@ -61,6 +61,19 @@ body{
 }
 /* MATH OPERATORS END */
 
+/* ANIMATIONS START */
+.main-menu-screen{
+    animation: titlefade 3s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+@keyframes titlefade{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+/* ANIMATIONS END */
+
+
 
 /* ---------------------------------------- */
 /* Mobile small - 4.7in */
