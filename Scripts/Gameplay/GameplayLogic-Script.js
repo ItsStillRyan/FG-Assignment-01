@@ -96,8 +96,3 @@ async function pageReturn(){
 }pageReturn()
 
 
-//geoff image goal changer
-// let plus = localStorage.getItem("additionHighscore")
-// let minus = localStorage.getItem("subtractionHighscore")
-// let times = localStorage.getItem("multiplicationsHighscore")
-// let divide = localStorage.getItem("divisionHighscore")

@@ -141,13 +141,11 @@ document.querySelector('.clickStartBtn').addEventListener('click', function () {
             let buttonsTop = document.querySelector('.choicesBTN')
             if (plus > 0 && plus < 15) {
                 addSprite.src = "../../Images/Gameplay/geoff-small.png"
-                
             } else if (plus > 16) {
+                console.log("is this working?")
                 addSprite.src = "../../Images/Gameplay/geoff-medium.png"
-                addSprite.style.width = "25vh"
+                addSprite.style.width = "22vh"
                 buttonsTop.style.marginTop = "0px"
-                
-
             }
         }, false)
     }
