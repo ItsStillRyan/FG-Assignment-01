@@ -17,8 +17,8 @@ function languageSwap(response) {
   
 
     if (selectedLanguage == "FR") {
-        document.querySelector('.startText').innerHTML = "cliquez pour commencer! >> <<"
-        document.querySelector('.startText').style.fontSize = "2.5em"
+        document.querySelector('.startText').innerHTML = "CLIQUEZ N'IMPORTE O POUR COMMENCER!"
+        document.querySelector('.startText').style.fontSize = "2.2em"
         resumeFR.src = response.data.FR.resume
         quitFR.src = response.data.FR.quit
         timesUpFR.src = response.data.FR.times_up
@@ -26,7 +26,7 @@ function languageSwap(response) {
         backFR.src = response.data.FR.back
      
     } else if (selectedLanguage == "EN") {
-        document.querySelector('.startText').innerHTML = "CLICK TO START! >> <<"
+        document.querySelector('.startText').innerHTML = "CLICK ANYWHERE TO START!"
         resumeFR.src = response.data.EN.resume
         quitFR.src = response.data.EN.quit
         timesUpFR.src = response.data.EN.times_up

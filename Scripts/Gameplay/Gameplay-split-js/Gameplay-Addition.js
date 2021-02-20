@@ -60,7 +60,11 @@ function highscoreClock() {
     }, 64000)
 }
 
-//creting an option array
+function onePlusAnimate(){
+    
+}
+
+//creating an option array
 let scoreArray = []
 
 localStorage.setItem("additionHighscore", 1)
@@ -113,26 +117,39 @@ document.querySelector('.clickStartBtn').addEventListener('click', function () {
             if (scoreArray.length > 5) {
                 scoreArray.pop()
             }
-
-
+            
+            let plusOne1 = document.querySelector('#plusOne1')
+             
             if (triggerValue == answerValue) {
                 let scoreIncrement = parseInt(localStorage.getItem("additionHighscore"))
                 localStorage.setItem("additionHighscore", ++scoreIncrement)
                 console.log(scoreIncrement)
+
+                //+1 animations
+                plusOne1.classList.add("PO-morsel");
+                plusOne1.classList.remove("PO-morsel");
+                void plusOne1.offsetWidth;
+                plusOne1.classList.add("PO-morsel");
             }
+            plusOne1.classList.add("PO-morsel");
 
             //geoff image goal changer
             let plus = localStorage.getItem("additionHighscore")
             console.log("scoreup", plus)
 
             let addSprite = document.querySelector('#geoff-sprite-img')
+            let buttonsTop = document.querySelector('.choicesBTN')
             if (plus > 0 && plus < 15) {
                 addSprite.src = "../../Images/Gameplay/geoff-small.png"
+                
             } else if (plus > 16) {
                 addSprite.src = "../../Images/Gameplay/geoff-medium.png"
-                addSprite.style.width = "48%"
+                addSprite.style.width = "25vh"
+                buttonsTop.style.marginTop = "0px"
+                
+
             }
-        })
+        }, false)
     }
 })
 
