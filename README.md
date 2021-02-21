@@ -1,31 +1,26 @@
-# FG-Assignment-01
-Assignment 1 Project
-<h1>Strategy</h1>
-<p>Targeted audience are elementary level students
-(ie.  Lower Primary School Students) or students that are just introduced into the 4 basic mathematical operations. This is to exercise and train on the mathematical skill set of the user in both quick-thinking and working underpressure. 
-The attractive and bright pixel art along with the cheerful and catchy music appeals to the intended demographic, inciting them to use the application often. Perhaps even inciting competitiveness between their peers with the built in high-score system.<p>
+![FGlogo](Images/Menu/logo.png)
+
+# A HTML5/CSS3 & Javascript based Project for Assignment 1
+***
+
+## **Context**
+___
+### _Opening Statement & Summary_
+This assignment has required us, the programmers, to create a HTML/CSS & Javascript based website with interactive elements, while demonstrating the understanding of the Five Planes of UI/UX.
+
+This project that I've created, within the set requirements, is essentially a fast paced mathematical quiz game with the aesthetic of a countryside farm. 
+
+Targeted mainly at elementary level children that are already being introduced into the 4 main mathematical operators, the users will be challenged on their current skillset and knowleadge under pressure. This is intended to nurture their critical thinking and develop cognitive and logical skills that will further prepare them to fufill today's educational standards. This may also extend to the parents/guardian of the children that have a similar goal in mind.
+___
+### _Personal goals and expected user goals_
+What I, as the programmer, hope to achieve is to provide a product that is intuitive and useful for both the child and their parents/guardian, to help improve and gauge their growing skill set
+
+As the user, the goal is to use the product to improve their own skill set while retaining an interest and is able to rely on the product to provide noticable improvements, specifically in math.
+***
+## Demo
+___
+The live website can be access from this link:
+## [Feeding Geoffrey](https://itsstillryan.github.io/FG-Assignment-01/)
+***
 
 
-<h1>Scope</h1>
-
-<h3>Functional Requirements</h3>
-<p>Able to clearly understand the mathematical questions and is of as low of difficulty as the user’s ability.
-Simple and clear navigation between screens/frames as the intended audience may or may not be tech-savvy </p>
-
-<h3>Non-Functional Requirements </h3>
-<p>Mobile responsiveness but have priority for mobile screen size, tablet screen size would be next and lastly, desktop screen size. 
-Localizations options, multiple languages are to be supported in the app, including numbers.</p>
-
-<h1>Structure</h1>
-https://github.com/ItsStillRyan/FG-Assignment-01/blob/a80550e700a0a85211c9c0865460892f25264a48/README-images/Structure.png
-
-<h1>Skeleton</h1>
-
-<h3>Mobile</h3>
-https://github.com/ItsStillRyan/FG-Assignment-01/blob/a80550e700a0a85211c9c0865460892f25264a48/README-images/Skeleton%201.png
-
-<h3>Tablet</h3>
-https://github.com/ItsStillRyan/FG-Assignment-01/blob/a80550e700a0a85211c9c0865460892f25264a48/README-images/Skeleton%202.png
-
-<h3>Desktop</h3>
-https://github.com/ItsStillRyan/FG-Assignment-01/blob/a80550e700a0a85211c9c0865460892f25264a48/README-images/Skeleton%203.png
