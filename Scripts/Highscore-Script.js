@@ -14,7 +14,7 @@ function languageSwap(response) {
 }
 
 document.querySelector('#backBtn').addEventListener('click', function(){
-    document.location.href = '../Index.html'
+    document.location.href = '../index.html'
 })
 
 function highscoreReplace(operator, score){
