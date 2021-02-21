@@ -1,204 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width" , initial-scale=1.0, maximum-scale=1, user-scalable=0>
-    <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-    <link rel="stylesheet" href="../../CSS/Gameplay-css/Mobile-resp.css">
+	<meta charset="UTF-8">
+	<meta content="width=device-width" name="viewport">
+	<title>Document</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link href="../../CSS/Gameplay-css/Mobile-resp.css" rel="stylesheet">
 </head>
-
 <body>
-    
-    <div class="cover-start">
-        <a class="btn clickStartBtn" onclick="highscoreClock(); resumeMusic()">
-            <img src="../../Images/Gameplay/black.png" class="coverImg" style="width:100%;">
-            <p class="startText">CLICK ANYWHERE TO START!</p>
-        </a>
-    </div>
-
-    <div class="main-gameplay">
-        <div class="count-and-pause container">
-            <div class="row">
-
-                <div class="col boxbor"></div>
-
-                <div class="col boxbor text-center" id="countdown">
-                    <p>60</p>
-                </div>
-
-                <div class="col boxbor">
-                    <button type="image" class="btn" id="pauseBtn" onclick="pauseBG(); pauseMusic()">
-                        <img src="../../Images/Gameplay/gameplay-Pause.png" alt="">
-                    </button>
-                </div>
-
-            </div>
-        </div>
-
-        <div class="equation container">
-            <div class="row">
-                <div class="col boxbor text-center">
-                    <p id="equation-line">
-                        <span id="eqNum1">26</span>
-                        -
-                        <span id="eqNum2">13</span>
-                        = ? </p>
-                </div>
-            </div>
-        </div>
-        <div class="plusOneAnimation container">
-            <div class="row">
-                <div class="col boxbor">
-                    <img src="../../Images/AnimationSprites/plusOne.png" alt="" id="plusOne1">
-                </div>
-            </div>
-        </div>
-        <div class="geoff-sprite container">
-            <div class="row ">
-                <div class="col boxbor">
-                    <img src="../../Images/Gameplay/geoff-small.png" alt="" id="geoff-sprite-img">
-                </div>
-            </div>
-        </div>
-
-        <div class="choicesBTN container">
-
-            <div class="row ">
-
-                <div class="col boxbor text-center buttonWrap">
-                    <button class="btn button-option btnTrig1" value="1">
-                        <img src="../../Images/Gameplay/optionsBTN.png" class="button-options" alt="">
-                        <p class="buttonNum1 buttonNum">21</p>
-                    </button>
-                </div>
-                <div class="col boxbor text-center buttonWrap">
-                    <button class="btn button-option btnTrig2" value="2">
-                        <img src="../../Images/Gameplay/optionsBTN.png" class="button-options" alt="">
-                        <p class="buttonNum2 buttonNum">25</p>
-                    </button>
-                </div>
-
-                <div class="w-100"></div>
-
-                <div class="col boxbor text-center buttonWrap">
-                    <button class="btn button-option btnTrig3" value="3">
-                        <img src="../../Images/Gameplay/optionsBTN.png" class="button-options" alt="">
-                        <p class="buttonNum3 buttonNum">13</p>
-                    </button>
-                </div>
-                <div class="col boxbor text-center buttonWrap">
-                    <button class="btn button-option btnTrig4" value="4">
-                        <img src="../../Images/Gameplay/optionsBTN.png" class="button-options" alt="">
-                        <p class="buttonNum4 buttonNum">34</p>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="pause-screen">
-
-        <div class="settingbtn container">
-            <div class="row">
-                <div class="col boxbor"></div>
-                <div class="col boxbor"></div>
-                <div class="col boxbor ">
-                    <button type="image" class="btn" id="settingsBtn">
-                        <img src="../../Images/Gameplay/pause-Settings.png" alt="">
-                    </button>
-                </div>
-            </div>
-        </div>
-
-        <div class="requ-btn container">
-            <div class="row">
-                <div class="col boxbor"></div>
-                <div class="col boxbor  text-center">
-                    <button type="image" class="gpBTN btn" id="resumeBTN" onclick="resumeMusic()">
-                        <img src="../../Images/Gameplay/pause.Resume.png" alt="" id="resumeGP">
-                    </button>
-                </div>
-                <div class="col boxbor"></div>
-                <div class="w-100"></div>
-                <div class="col boxbor"></div>
-                <div class="col boxbor  text-center">
-                    <button type="image" class="gpBTN btn" id="quitBTN">
-                        <img src="../../Images/Gameplay/pause-Quit.png" alt="" id="quitGP">
-                    </button>
-                </div>
-                <div class="col boxbor"></div>
-            </div>
-        </div>
-
-    </div>
-
-    <div class="settings-screen">
-        <div class="container">
-            <div class="row">
-                <div class="col audio-toggle showcol text-center">
-                    <audio controls id="gameplayAudio">
-                        <source src="../../Additionals/Gameplay-Mu-mk2.mp3" type="audio/mp3">
-                    </audio>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col showcol text-center">
-                    <button type="image" class="btn" id="back-Btn">
-                        <img src="../../Images/Menu/settings-BackButton.png" alt="" class="backBtn">
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="timesup-screen">
-        <img src="../../Images/Gameplay/timesup-logo.png" alt="" id="timesupimg" class="mx-auto d-block img-fluid">
-    </div>
-
-    <div class="gameover-screen">
-        <div class="scoreboardWrap">
-            <div id="score-board">
-                <img src="../../Images/Gameplay/Gameover-board.png" class="score-board" alt="" id="bannerGO">
-            </div>
-
-            <div class="scoreText">
-                <p class="scoreSubtraction">0</p>
-            </div>
-        </div>
-        <div class="container btn-box">
-            <div class="row">
-                <div class="col boxbor">
-                    <button type="image" class="gmBTN btn" id="replayBTN">
-                        <img src="../../Images/Gameplay/Gameover-replay.png" alt="">
-                    </button>
-
-                    <button type="image" class="gmBTN btn" id="highscoreBTN">
-                        <img src="../../Images/Gameplay/Gameover-highscore.png" alt="">
-                    </button>
-
-                    <button type="image" class="gmBTN btn" id="mainmenuBTN">
-                        <img src="../../Images/Gameplay/Gameover-mainmenu.png" alt="">
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-
-    <!-- SCRIPTS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
-        crossorigin="anonymous"></script>
-
-    <script src="../../Scripts/Gameplay/GameplayTransition-Script.js"></script>
-    <script src="../../Scripts/Gameplay/GameplayLogic-Script.js"></script>
-    <script src="../../Scripts/Gameplay/Gameplay-split-js/Gameplay-Subtraction.js"></script>
+	<div class="cover-start">
+		<a class="btn clickStartBtn" onclick="highscoreClock(); resumeMusic()"><img class="coverImg" src="../../Images/Gameplay/black.png" style="width:100%;">
+		<p class="startText">CLICK ANYWHERE TO START!</p></a>
+	</div>
+	<div class="main-gameplay">
+		<div class="count-and-pause container">
+			<div class="row">
+				<div class="col boxbor"></div>
+				<div class="col boxbor text-center" id="countdown">
+					<p>60</p>
+				</div>
+				<div class="col boxbor">
+					<button class="btn" id="pauseBtn" onclick="pauseBG(); pauseMusic()" type="image"><img alt="" src="../../Images/Gameplay/gameplay-Pause.png"></button>
+				</div>
+			</div>
+		</div>
+		<div class="equation container">
+			<div class="row">
+				<div class="col boxbor text-center">
+					<p id="equation-line"><span id="eqNum1">26</span> - <span id="eqNum2">13</span> = ?</p>
+				</div>
+			</div>
+		</div>
+		<div class="plusOneAnimation container">
+			<div class="row">
+				<div class="col boxbor"><img alt="" id="plusOne1" src="../../Images/AnimationSprites/plusOne.png"></div>
+			</div>
+		</div>
+		<div class="geoff-sprite container">
+			<div class="row">
+				<div class="col boxbor"><img alt="" id="geoff-sprite-img" src="../../Images/Gameplay/geoff-small.png"></div>
+			</div>
+		</div>
+		<div class="choicesBTN container">
+			<div class="row">
+				<div class="col boxbor text-center buttonWrap">
+					<button class="btn button-option btnTrig1" value="1"><img alt="" class="button-options" src="../../Images/Gameplay/optionsBTN.png">
+					<p class="buttonNum1 buttonNum">21</p></button>
+				</div>
+				<div class="col boxbor text-center buttonWrap">
+					<button class="btn button-option btnTrig2" value="2"><img alt="" class="button-options" src="../../Images/Gameplay/optionsBTN.png">
+					<p class="buttonNum2 buttonNum">25</p></button>
+				</div>
+				<div class="w-100"></div>
+				<div class="col boxbor text-center buttonWrap">
+					<button class="btn button-option btnTrig3" value="3"><img alt="" class="button-options" src="../../Images/Gameplay/optionsBTN.png">
+					<p class="buttonNum3 buttonNum">13</p></button>
+				</div>
+				<div class="col boxbor text-center buttonWrap">
+					<button class="btn button-option btnTrig4" value="4"><img alt="" class="button-options" src="../../Images/Gameplay/optionsBTN.png">
+					<p class="buttonNum4 buttonNum">34</p></button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="pause-screen">
+		<div class="settingbtn container">
+			<div class="row">
+				<div class="col boxbor"></div>
+				<div class="col boxbor"></div>
+				<div class="col boxbor">
+					<button class="btn" id="settingsBtn" type="image"><img alt="" src="../../Images/Gameplay/pause-Settings.png"></button>
+				</div>
+			</div>
+		</div>
+		<div class="requ-btn container">
+			<div class="row">
+				<div class="col boxbor"></div>
+				<div class="col boxbor text-center">
+					<button class="gpBTN btn" id="resumeBTN" onclick="resumeMusic()" type="image"><img alt="" id="resumeGP" src="../../Images/Gameplay/pause.Resume.png"></button>
+				</div>
+				<div class="col boxbor"></div>
+				<div class="w-100"></div>
+				<div class="col boxbor"></div>
+				<div class="col boxbor text-center">
+					<button class="gpBTN btn" id="quitBTN" type="image"><img alt="" id="quitGP" src="../../Images/Gameplay/pause-Quit.png"></button>
+				</div>
+				<div class="col boxbor"></div>
+			</div>
+		</div>
+	</div>
+	<div class="settings-screen">
+		<div class="container">
+			<div class="row">
+				<div class="col audio-toggle showcol text-center">
+					<audio controls="" id="gameplayAudio"><source src="../../Additionals/Gameplay-Mu-mk2.mp3" type="audio/mp3"></audio>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col showcol text-center">
+					<button class="btn" id="back-Btn" type="image"><img alt="" class="backBtn" src="../../Images/Menu/settings-BackButton.png"></button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="timesup-screen"><img alt="" class="mx-auto d-block img-fluid" id="timesupimg" src="../../Images/Gameplay/timesup-logo.png"></div>
+	<div class="gameover-screen">
+		<div class="scoreboardWrap">
+			<div id="score-board"><img alt="" class="score-board" id="bannerGO" src="../../Images/Gameplay/Gameover-board.png"></div>
+			<div class="scoreText">
+				<p class="scoreSubtraction">0</p>
+			</div>
+		</div>
+		<div class="container btn-box">
+			<div class="row">
+				<div class="col boxbor">
+					<button class="gmBTN btn" id="replayBTN" type="image"><img alt="" src="../../Images/Gameplay/Gameover-replay.png"></button> <button class="gmBTN btn" id="highscoreBTN" type="image"><img alt="" src="../../Images/Gameplay/Gameover-highscore.png"></button> <button class="gmBTN btn" id="mainmenuBTN" type="image"><img alt="" src="../../Images/Gameplay/Gameover-mainmenu.png"></button>
+				</div>
+			</div>
+		</div>
+	</div><!-- SCRIPTS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js">
+	</script> 
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js">
+	</script> 
+	<script src="../../Scripts/Gameplay/GameplayTransition-Script.js">
+	</script> 
+	<script src="../../Scripts/Gameplay/GameplayLogic-Script.js">
+	</script> 
+	<script src="../../Scripts/Gameplay/Gameplay-split-js/Gameplay-Subtraction.js">
+	</script>
 </body>
-
 </html>

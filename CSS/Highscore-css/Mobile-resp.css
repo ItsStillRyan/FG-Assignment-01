@@ -1,135 +1,136 @@
 /* fonts */
-@font-face 
-{
-    font-family: FG-FONT; 
-    src: url('../../Additionals/04B_30__.TTF'); 
+
+@font-face {
+	font-family: FG-FONT;
+	src: url('../../Additionals/04B_30__.TTF');
 }
 /* backgrounds */
-body{
-    background-image: url(../../Images/Menu/main-BG.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
-    
-}
 
-.hcbillboard{
-    text-align: center;
-    position: relative;
+body {
+	background-image: url(../../Images/Menu/main-BG.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center;
 }
- 
-.back-button{
-    margin-top: 10px;
-    text-align: center;
-    
+.hcbillboard {
+	text-align: center;
+	position: relative;
+}
+.back-button {
+	margin-top: 10px;
+	text-align: center;
 }
 /* #backBtn{
     width: 200px;
 } */
-.scoreList{
-    position: absolute;
-    top: 60%;
-    left: 48%;
-    transform: translate(-50%, -50%);
-    list-style: none;
-    font-family:FG-FONT;
 
+.scoreList {
+	position: absolute;
+	top: 60%;
+	left: 48%;
+	transform: translate(-50%, -50%);
+	list-style: none;
+	font-family: FG-FONT;
 }
-
 /* .borderGuide{
     border: 1px solid black;
 } */
 
 /* ---------------------------------------- */
+
 /* Mobile small - 4.7in */
-@media (min-width: 375px){
-    
-.hcbillboard img{
-    height: 60vh;
-    width: auto;
-    margin-top: 10vh;
-}
-.scoreList{
-    top: 65%;
-    font-size: 2.5em;
-}
-}
 
+@media (min-width: 375px) {
+	.hcbillboard img {
+		height: 60vh;
+		width: auto;
+		margin-top: 10vh;
+	}
+	.scoreList {
+		top: 65%;
+		font-size: 2.5em;
+	}
+}
 /* ---------------------------------------- */
+
 /* Mobile Medium - 5.8in */
-@media (min-width: 375px) and (min-height: 812px){
-.hcbillboard img{
-    height: 60vh;
-    width: 93vw;
-    margin-top: 10vh;
-}
-.scoreList{
-    top: 65%;
-    font-size: 2.5em;
-}
+
+@media (min-width: 375px) and (min-height: 812px) {
+	.hcbillboard img {
+		height: 60vh;
+		width: 93vw;
+		margin-top: 10vh;
+	}
+	.scoreList {
+		top: 65%;
+		font-size: 2.5em;
+	}
 }
 /* ---------------------------------------- */
+
 /* Mobile Large - 6.4in */
-@media (min-width: 360px) and (min-height: 740px){
-.hcbillboard img{
-    height: 60vh;
-    width: 93vw;
-    margin-top: 10vh;
-}
-.scoreList{
-    top: 65%;
-    font-size: 2.5em;
-}
+
+@media (min-width: 360px) and (min-height: 740px) {
+	.hcbillboard img {
+		height: 60vh;
+		width: 93vw;
+		margin-top: 10vh;
+	}
+	.scoreList {
+		top: 65%;
+		font-size: 2.5em;
+	}
 }
 /* ---------------------------------------- */
+
 /* tablet */
-@media (min-width: 768px) and (min-height: 1024px){
-.hcbillboard img{
-    height: 60vh;
-    width: auto;
-    margin-top: 10vh;
-}
-.scoreList{
-    top: 60%;
-    font-size: 3em;
-}
-}
 
+@media (min-width: 768px) and (min-height: 1024px) {
+	.hcbillboard img {
+		height: 60vh;
+		width: auto;
+		margin-top: 10vh;
+	}
+	.scoreList {
+		top: 60%;
+		font-size: 3em;
+	}
+}
 /* Ipad pro */
-@media (min-width: 1024px) and (min-height: 1366px){
-.hcbillboard img{
-    height: 60vh;
-    width: auto;
-    margin-top: 10vh;
-}
-.scoreList{
-    top: 60%;
-    font-size: 4em;
-}
-}
 
+@media (min-width: 1024px) and (min-height: 1366px) {
+	.hcbillboard img {
+		height: 60vh;
+		width: auto;
+		margin-top: 10vh;
+	}
+	.scoreList {
+		top: 60%;
+		font-size: 4em;
+	}
+}
 /* ---------------------------------------- */
+
 /* Desktop */
-@media (min-width: 1440px){
-.hcbillboard img{
-    height: 60vh;
-    width: auto;
-    margin-top: 10vh;
-}
-}
 
-@media (min-width: 1920px){
-.hcbillboard img{
-    height: 60vh;
-    width: auto;
-    margin-top: 10vh;
+@media (min-width: 1440px) {
+	.hcbillboard img {
+		height: 60vh;
+		width: auto;
+		margin-top: 10vh;
+	}
 }
-
-.scoreList{
-    top: 60%;
-    left: 50%;
-    width: 50vh;
-    font-size: 4em;
-}
+@media (min-width: 1920px) {
+	.hcbillboard img {
+		height: 60vh;
+		width: auto;
+		margin-top: 10vh;
+	}
+	.scoreList {
+		top: 60%;
+		left: 50%;
+		width: 50vh;
+		font-size: 4em;
+	}
 }

@@ -1,203 +1,205 @@
-body{
-    background-image: url(../../Images/Menu/main-BG.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center bottom;
+body {
+	background-image: url(../../Images/Menu/main-BG.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center bottom;
 }
-.main-menu-screen{
-    display: block;
+.main-menu-screen {
+	display: block;
 }
 /* .showcol{
     border: 2px solid black;
 }  */
-.main-logo{
-   margin-top: 2vh;
-}   
-#titlemain{
-   width: 45vh;
-   margin-top: 5vh;
-}
-.main-buttons{ 
-    margin-top: 35vh;
-}
-.mBTN{
-    margin-top: 15px;
-    padding:0;
-}
 
-/* MAIN MENU PAGE END*/ 
+.main-logo {
+	margin-top: 2vh;
+}
+#titlemain {
+	width: 45vh;
+	margin-top: 5vh;
+}
+.main-buttons {
+	margin-top: 35vh;
+}
+.mBTN {
+	margin-top: 15px;
+	padding: 0;
+}
+/* MAIN MENU PAGE END*/
 
 /* SETTINGS PAGE*/
-.settings-screen{
-    display: none;
-    margin: auto;
+
+.settings-screen {
+	display: none;
+	margin: auto;
 }
-.audio-toggle{
-    margin-top: 40vh;
+.audio-toggle {
+	margin-top: 40vh;
 }
-
-.audio-toggle audio{
-    width: 80%;
+.audio-toggle audio {
+	width: 80%;
 }
-
-.language-Toggle img{
-    width: 30px;
+.language-Toggle img {
+	width: 30px;
 }
-
-
-
 /* SETTINGS PAGE END */
 
 /* MATH OPERATORS */
-.math-op-screen{ 
-    display: none;
-    margin: auto;
-    text-align: center;
-    margin-top: 10vh;
+
+.math-op-screen {
+	display: none;
+	margin: auto;
+	text-align: center;
+	margin-top: 10vh;
 }
-.math-op-screen img{ 
-    height:80vh;
+.math-op-screen img {
+	height: 80vh;
 }
 /* MATH OPERATORS END */
 
 /* ANIMATIONS START */
-.main-menu-screen{
-    animation: titlefade 3s;
-    animation-fill-mode: forwards;
-    opacity: 0;
+
+.main-menu-screen {
+	animation: titlefade 3s;
+	animation-fill-mode: forwards;
+	opacity: 0;
 }
-@keyframes titlefade{
-    0%{opacity: 0;}
-    100%{opacity: 1;}
+@keyframes titlefade {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }
 /* ANIMATIONS END */
 
-
-
 /* ---------------------------------------- */
+
 /* Mobile small - 4.7in */
-@media (min-width: 375px){
-.settings-screen{
-    width: 80vw;
-}
 
-#settingsBTN img{
-    height: 55px;
-    margin-top: 1vh;
-}
-
-.settingsBtn{
-    height: 40px;
-}
-.backBtn{
-    width: 70%;
-}
-.back-Btn{
-    margin-top: 4vh;
-}
-.main-buttons{ 
-    margin-top: 34vh;
-}
+@media (min-width: 375px) {
+	.settings-screen {
+		width: 80vw;
+	}
+	#settingsBTN img {
+		height: 55px;
+		margin-top: 1vh;
+	}
+	.settingsBtn {
+		height: 40px;
+	}
+	.backBtn {
+		width: 70%;
+	}
+	.back-Btn {
+		margin-top: 4vh;
+	}
+	.main-buttons {
+		margin-top: 34vh;
+	}
 }
 /* ---------------------------------------- */
+
 /* Mobile Medium - 5.8in */
-@media (min-width: 375px) and (min-height: 812px){
-.settings-screen{
-    width: 80vw;
-}
-.settingsBtn img{
-    height: 40px;
-    margin-top: 1vh;
-    
-}
-.backBtn{
-    width: 70%;
-}
-.back-Btn{
-    margin-top: 3vh;
-}
-.main-buttons{ 
-    margin-top: 40vh;
-}
+
+@media (min-width: 375px) and (min-height: 812px) {
+	.settings-screen {
+		width: 80vw;
+	}
+	.settingsBtn img {
+		height: 40px;
+		margin-top: 1vh;
+	}
+	.backBtn {
+		width: 70%;
+	}
+	.back-Btn {
+		margin-top: 3vh;
+	}
+	.main-buttons {
+		margin-top: 40vh;
+	}
 }
 /* ---------------------------------------- */
+
 /* Mobile Large - 6.4in */
-@media (min-width: 360px) and (min-height: 740px){
-.settings-screen{
-    width: 95vw;
-}
-#settingsBTN img{
-    height: 55px;
-    margin-top: 1vh;
-    
-}
-.backBtn{
-    margin-top: 5vh;
-    width: 70%;
-}
-.main-buttons{ 
-    margin-top: 40vh;
-}
+
+@media (min-width: 360px) and (min-height: 740px) {
+	.settings-screen {
+		width: 95vw;
+	}
+	#settingsBTN img {
+		height: 55px;
+		margin-top: 1vh;
+	}
+	.backBtn {
+		margin-top: 5vh;
+		width: 70%;
+	}
+	.main-buttons {
+		margin-top: 40vh;
+	}
 }
 /* ---------------------------------------- */
+
 /* tablet */
-@media (min-width: 768px) and (min-height: 1024px){
-.settings-screen{
-    width: 60vw;
-}
-.settingsBtn img{
-    height: 50px;
-    margin-top: 1vh;
-    
-}
-.backBtn{
-    width: 70%;
-    margin-top: 5vh;
-}
+
+@media (min-width: 768px) and (min-height: 1024px) {
+	.settings-screen {
+		width: 60vw;
+	}
+	.settingsBtn img {
+		height: 50px;
+		margin-top: 1vh;
+	}
+	.backBtn {
+		width: 70%;
+		margin-top: 5vh;
+	}
 }
 /* Ipad pro */
-@media (min-width: 1024px) and (min-height: 1366px){
-.settings-screen{
-    width: 60vw;
-}
-.settingsBtn img{
-    height: 40px;
-    margin-top: 1vh;
-}
-.backBtn{
-    width: 90%;
-    margin-top: 5vh;
-}
-.main-buttons{ 
-    margin-top: 40vh;
-}
+
+@media (min-width: 1024px) and (min-height: 1366px) {
+	.settings-screen {
+		width: 60vw;
+	}
+	.settingsBtn img {
+		height: 40px;
+		margin-top: 1vh;
+	}
+	.backBtn {
+		width: 90%;
+		margin-top: 5vh;
+	}
+	.main-buttons {
+		margin-top: 40vh;
+	}
 }
 /* ---------------------------------------- */
+
 /* Desktop */
-@media (min-width: 1300px){
-.settings-screen{
-    width: 35vw;
-}
-.settingsBtn img{
-    height: 40px;
-    margin-top: 1vh;
-    
-}
-}
 
-@media (min-width: 1920px){
-.settings-screen{
-    width: 25vw;
+@media (min-width: 1300px) {
+	.settings-screen {
+		width: 35vw;
+	}
+	.settingsBtn img {
+		height: 40px;
+		margin-top: 1vh;
+	}
 }
-.settingsBtn img{
-    height: 40px;
-    margin-top: 1vh;
-    
-}
-
-.backBtn{
-    margin-top: 3vh;
-    width: 90%;
-}
+@media (min-width: 1920px) {
+	.settings-screen {
+		width: 25vw;
+	}
+	.settingsBtn img {
+		height: 40px;
+		margin-top: 1vh;
+	}
+	.backBtn {
+		margin-top: 3vh;
+		width: 90%;
+	}
 }

@@ -1,138 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width" , initial-scale=1.0, maximum-scale=1, user-scalable=0>
-    <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-    <link rel="stylesheet" href="../CSS/Menu-css/Mobile-resp.css">
+	<meta charset="UTF-8">
+	<meta content="width=device-width" name="viewport">
+	<title>Document</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link href="../CSS/Menu-css/Mobile-resp.css" rel="stylesheet">
 </head>
-
 <body>
-
-    <div class="main-menu-screen">
-
-        <div class="Settings-btn">
-            <div class="row">
-                <div class="col showcol"></div>
-                <div class="col showcol"></div>
-                <div class="col showcol text-center">
-                    <button type="image" class="btn" id="settingsBTN">
-                        <img src="../Images/Menu/main-SettingsButton.png" alt="">
-                    </button>
-                </div>
-
-            </div>
-        </div>
-
-        <div class="main-logo">
-            <div class="row">
-
-                <div class="col showcol text-center">
-                    <img src="../Images/Menu/logo.png" id="titlemain" alt="">
-                </div>
-            </div>
-        </div>
-
-        <!-- BUTTONS -->
-
-        <div class="main-buttons">
-            <div class="row">
-                <div class="col showcol"></div>
-
-                <div class="col showcol text-center">
-                    <button type="image" class="mBTN btn" id="playBTN">
-                        <img src="../Images/Menu/main-PlayButton.png" id="playmain" alt="">
-                    </button>
-                </div>
-
-                <div class="col showcol"></div>
-                <div class="w-100"></div>
-                <div class="col showcol"></div>
-
-                <div class="col showcol text-center">
-                    <button type="image" class="mBTN btn" id="highscoreBTN">
-                        <img src="../Images/Menu/main-LeaderboardButton.png" alt="">
-                    </button>
-                </div>
-
-                <div class="col showcol"></div>
-            </div>
-        </div>
-        <!-- BUTTONS END -->
-    </div>
-
-    <div class="math-op-screen">
-
-        <map name="mathOperator">
-            <area shape="rect" coords="90,401,218,525" value="1" class="subtraction"
-                href="../HTML/Gameplay-split/Gameplay-Subtraction.html" />
-
-            <area shape="poly" coords="277,577,365,666,274,755,188,663" value="2" class="division"
-                href="../HTML/Gameplay-split/Gameplay-Division.html" />
-
-            <area shape="rect" coords="329,249,454,376" value="3" class="addition"
-                href="../HTML/Gameplay-split/Gameplay-Addition.html" />
-
-            <area shape="rect" coords="436,467,558,588" value="4" class="multiplication"
-                href="../HTML/Gameplay-split/Gameplay-Multiplication.html" />
-
-
-
-            <img usemap="#mathOperator" class="math-op" src="../../Images/Menu/clouds-only.png" alt="math-op-fp"/>
-
-
-    </div>
-
-    <div class="settings-screen">
-
-        <div class="container audio-Controls">
-            <div class="row">
-                <div class="col audio-toggle showcol text-center">
-                    <audio controls autoplay loop>
-                        <source src="../Additionals/Main-Mu.mp3" type="audio/mp3">
-                    </audio>
-                </div>
-            </div>
-        </div>
-
-        <div class="container language-Toggle">
-            <div class="row">
-                <div class="col text-center showcol">
-                    <button class="btn englishBtn">
-                        <img src="Images/Languages/us-flag.png" alt="">
-                    </button>
-                </div>
-
-                <div class="col text-center showcol">
-                     <button class="btn frenchBtn">
-                        <img src="Images/Languages/french-flag.png" alt="">
-                    </button>
-                </div>
-            </div>
-        </div>
-
-        <div class="container back-Btn">
-            <div class="row">
-                <div class="col showcol text-center">
-                    <button type="image" class="btn" id="back-Btn">
-                        <img src="../Images/Menu/settings-BackButton.png" alt="" class="backBtn" id="backBtn">
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-    <!-- SCRIPTS UNDER HERE -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
-        crossorigin="anonymous"></script>
-    <script src="../Scripts/imageMapResizer.min.js"></script>
-    <script src="../Scripts/Menu-Script.js"></script>
+	<div class="main-menu-screen">
+		<div class="Settings-btn">
+			<div class="row">
+				<div class="col showcol"></div>
+				<div class="col showcol"></div>
+				<div class="col showcol text-center">
+					<button class="btn" id="settingsBTN" type="image"><img alt="" src="../Images/Menu/main-SettingsButton.png"></button>
+				</div>
+			</div>
+		</div>
+		<div class="main-logo">
+			<div class="row">
+				<div class="col showcol text-center"><img alt="" id="titlemain" src="../Images/Menu/logo.png"></div>
+			</div>
+		</div><!-- BUTTONS -->
+		<div class="main-buttons">
+			<div class="row">
+				<div class="col showcol"></div>
+				<div class="col showcol text-center">
+					<button class="mBTN btn" id="playBTN" type="image"><img alt="" id="playmain" src="../Images/Menu/main-PlayButton.png"></button>
+				</div>
+				<div class="col showcol"></div>
+				<div class="w-100"></div>
+				<div class="col showcol"></div>
+				<div class="col showcol text-center">
+					<button class="mBTN btn" id="highscoreBTN" type="image"><img alt="" src="../Images/Menu/main-LeaderboardButton.png"></button>
+				</div>
+				<div class="col showcol"></div>
+			</div>
+		</div><!-- BUTTONS END -->
+	</div>
+	<div class="math-op-screen">
+		<map id="mathOperator" name="mathOperator">
+			<area class="subtraction" coords="90,401,218,525" href="../HTML/Gameplay-split/Gameplay-Subtraction.html" shape="rect">
+			<area class="division" coords="277,577,365,666,274,755,188,663" href="../HTML/Gameplay-split/Gameplay-Division.html" shape="poly">
+			<area class="addition" coords="329,249,454,376" href="../HTML/Gameplay-split/Gameplay-Addition.html" shape="rect">
+			<area class="multiplication" coords="436,467,558,588" href="../HTML/Gameplay-split/Gameplay-Multiplication.html" shape="rect">
+			<img alt="math-op-fp" class="math-op" src="../../Images/Menu/clouds-only.png" usemap="#mathOperator">
+		</map>
+	</div>
+	<div class="settings-screen">
+		<div class="container audio-Controls">
+			<div class="row">
+				<div class="col audio-toggle showcol text-center">
+					<audio autoplay="" controls="" loop=""><source src="../Additionals/Main-Mu.mp3" type="audio/mp3"></audio>
+				</div>
+			</div>
+		</div>
+		<div class="container language-Toggle">
+			<div class="row">
+				<div class="col text-center showcol">
+					<button class="btn englishBtn"><img alt="" src="Images/Languages/us-flag.png"></button>
+				</div>
+				<div class="col text-center showcol">
+					<button class="btn frenchBtn"><img alt="" src="Images/Languages/french-flag.png"></button>
+				</div>
+			</div>
+		</div>
+		<div class="container back-Btn">
+			<div class="row">
+				<div class="col showcol text-center">
+					<button class="btn" id="back-Btn" type="image"><img alt="" class="backBtn" id="backBtn" src="../Images/Menu/settings-BackButton.png"></button>
+				</div>
+			</div>
+		</div>
+	</div><!-- SCRIPTS UNDER HERE -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js">
+	</script> 
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js">
+	</script> 
+	<script src="../Scripts/imageMapResizer.min.js">
+	</script> 
+	<script src="../Scripts/Menu-Script.js">
+	</script>
 </body>
-
 </html>
