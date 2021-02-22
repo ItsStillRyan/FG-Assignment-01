@@ -1,4 +1,4 @@
-![FGlogo](Images/Menu/logo.png)
+![FGlogo](Images/README/Clean-logo.png)
 
 # A HTML5/CSS3 & Javascript based Project for Assignment 1
 ***
@@ -218,10 +218,13 @@ Drop-down menu to select a publishing source
 ## Credits
 ___
 ### Art
-Main Background Layer of all screen- https://wallup.net/8-bit/
-Dirt texture
-Pixelated pid
-Drum stick morsel
+Main Background Layer of all screen - https://wallup.net/8-bit/
+
+Dirt texture - https://pixeljoint.com/pixelart/66240.htm
+
+Pixelated pig - https://pixelblock.tumblr.com/post/57434361584/a-pig-porcine-porkchop-producer-and-friendly
+
+Drum stick morsel - https://www.gamedevmarket.net/asset/free-pixel-food/
 
 ### Fonts
 Logo and main font - https://www.dafont.com/04b-30.font
