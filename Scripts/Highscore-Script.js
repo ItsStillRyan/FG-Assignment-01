@@ -27,7 +27,7 @@ highscoreReplace('.multiplicationScore', mulScore)
 highscoreReplace('.divisionScore', divScore)
 
 async function pageReturn() {
-	let response = await axios.get('JSON/French.json')
+	let response = await axios.get('../JSON/French.json')
 	console.log("Database Active. Returning Test Value:", response.data.EN.title)
 	languageSwap(response)
 }
