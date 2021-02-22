@@ -1,5 +1,5 @@
-let settingsscreen = "url('../../Images/Menu/Settings-BG.jpg')"
-let menuscreen = "url('../../Images/Menu/main-BG.jpg')"
+let settingsscreen = "url('Images/Menu/Settings-BG.jpg')"
+let menuscreen = "url('Images/Menu/main-BG.jpg')"
 
 function screenChange(BG) {
 	document.body.style.backgroundImage = BG
