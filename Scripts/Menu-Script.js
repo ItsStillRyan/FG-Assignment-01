@@ -46,23 +46,23 @@ document.querySelector('#back-Btn').addEventListener('click', function() {
 })
 //highscore transitions
 document.querySelector('#highscoreBTN').addEventListener('click', function() {
-	document.location.href = '../HTML/Highscore.html'
+	document.location.href = '/HTML/Highscore.html'
 })
 //language clicks
 document.querySelector(".frenchBtn").addEventListener('click', async function() {
 	localStorage.setItem("languageSelected", "FR")
-	let response = await axios.get('/JSON/French.json')
+	let response = await axios.get('../../JSON/French.json')
 	console.log(response.data.FR.title)
 	languageSwap(response)
 })
 document.querySelector(".englishBtn").addEventListener('click', async function() {
 	localStorage.setItem("languageSelected", "EN")
-	let response = await axios.get('/JSON/French.json')
+	let response = await axios.get('../../JSON/French.json')
 	console.log(response.data.EN.title)
 	languageSwap(response)
 })
 async function pageReturn() {
-	let response = await axios.get('/JSON/French.json')
+	let response = await axios.get('../../JSON/French.json')
 	console.log("Database Active. Returning Test Value:", response.data.EN.title)
 	languageSwap(response)
 }
