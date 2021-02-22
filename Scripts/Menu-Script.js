@@ -62,7 +62,7 @@ document.querySelector(".englishBtn").addEventListener('click', async function()
 	languageSwap(response)
 })
 async function pageReturn() {
-	let response = await axios.get('JSON/French.json')
+	let response = await axios.get('../JSON/French.json')
 	console.log("Database Active. Returning Test Value:", response.data.EN.title)
 	languageSwap(response)
 }
