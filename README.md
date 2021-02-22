@@ -183,7 +183,7 @@ Markup Validations
 ***
 
 
-## Future development plans
+## Future development plans and Existing Bugs
 ___
 ### Animations
 
@@ -219,6 +219,10 @@ Drop-down menu to select a publishing source
 ___
 ### Art
 Main Background Layer of all screen- https://wallup.net/8-bit/
+Dirt texture
+Pixelated pid
+Drum stick morsel
+
 ### Fonts
 Logo and main font - https://www.dafont.com/04b-30.font
 
