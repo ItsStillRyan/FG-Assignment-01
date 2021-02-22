@@ -21,7 +21,7 @@ function languageSwap(response) {
 		quitFR.src = response.data.FR.quit
 		timesUpFR.src = response.data.FR.times_up
 		gameoverFR.src = response.data.FR.gameover
-        gpbackFR.src = responsedata.FR.gp_back
+        gpbackFR.src = response.data.FR.gp_back
         
 	} else if (selectedLanguage == "EN") {
 		document.querySelector('.startText').innerHTML = "CLICK ANYWHERE TO START!"
@@ -29,7 +29,7 @@ function languageSwap(response) {
 		quitFR.src = response.data.EN.quit
 		timesUpFR.src = response.data.EN.times_up
 		gameoverFR.src = response.data.EN.gameover
-        gpbackFR.src = responsedata.EN.gp_back
+        gpbackFR.src = response.data.EN.gp_back
 	}
 }
 //MAIN TIMER

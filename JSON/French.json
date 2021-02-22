@@ -9,6 +9,7 @@
         "times_up":"../../Images/French/gameplay-timesup.png",
         "gameover":"../../Images/French/gameplay-gameover.png",
         "HS_board":"../../Images/French/highscore-board.png",
+        "HS_back":"../../Images/French/back.png",
         "gp_back":"../../Images/French/back.png"
     },
     "EN":{
@@ -21,6 +22,7 @@
         "times_up":"../../Images/Gameplay/timesup-logo.png",
         "gameover":"../../Images/Gameplay/Gameover-board.png",
         "HS_board":"../../Images/Highscore/scoreboard.png",
+        "HS_back":"../../Images/Menu/settings-BackButton.png",
         "gp_back":"../../Images/Menu/settings-BackButton.png"
     }
 }

@@ -4,10 +4,10 @@ function languageSwap(response) {
 	let back = document.querySelector('#backbtn')
 	if (selectedLanguage == "FR") {
 		hsboard.src = response.data.FR.HS_board
-		back.src = response.data.FR.back
+		back.src = response.data.FR.HS_back
 	} else if (selectedLanguage == "EN") {
 		hsboard.src = response.data.EN.HS_board
-		back.src = response.data.EN.back
+		back.src = response.data.EN.HS_back
 	}
 }
 document.querySelector('#backBtn').addEventListener('click', function() {
