@@ -82,6 +82,13 @@ Taking advantage of "display:" CSS, I am able to achieve seemless transitions be
     * This screen provides the user with their final highscore, along with buttons to replay the game, the highscore page, or back to the main menu.
 #### Responsiveness
 I have chosen 6 breakpoints for mobile responsiveness, 3 mobile sizes, 2 tablet sizes and a 1080p desktop screen size. As researched, these are the most common screen sizes and thus, it would make sense to cater to these specific sizes.
+The screen sizes I cater for in this project:
+ * Mobile Small - 375 x 667
+ * Mobile Medium - 375 x 812
+ * Mobile Large - 360 x 740
+ * Tablet - 768 x 7024
+ * Tablet Large(ipad pro) - 834 x 1112
+ * Desktop - 1920 x 1080
 #### Navigation
 Since it will be a children's game, a simple navigation is key. All pages are within the "3 clicks" rule, all navigation buttons are clearly displayed.
 
