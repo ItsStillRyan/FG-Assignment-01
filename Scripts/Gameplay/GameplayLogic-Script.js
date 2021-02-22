@@ -13,7 +13,6 @@ function languageSwap(response) {
 	let quitFR = document.querySelector('#quitGP')
 	let timesUpFR = document.querySelector('#timesupimg')
 	let gameoverFR = document.querySelector('#bannerGO')
-    let backFR = document.querySelector('.backBtn')
     let gpbackFR = document.querySelector('.setbackBtn')
 	if (selectedLanguage == "FR") {
 		document.querySelector('.startText').innerHTML = "CLIQUEZ N'IMPORTE O POUR COMMENCER!"
@@ -22,7 +21,6 @@ function languageSwap(response) {
 		quitFR.src = response.data.FR.quit
 		timesUpFR.src = response.data.FR.times_up
 		gameoverFR.src = response.data.FR.gameover
-        backFR.src = response.data.FR.back
         gpbackFR.src = responsedata.FR.gp_back
         
 	} else if (selectedLanguage == "EN") {
@@ -31,7 +29,6 @@ function languageSwap(response) {
 		quitFR.src = response.data.EN.quit
 		timesUpFR.src = response.data.EN.times_up
 		gameoverFR.src = response.data.EN.gameover
-        backFR.src = response.data.EN.back
         gpbackFR.src = responsedata.EN.gp_back
 	}
 }
@@ -77,7 +74,7 @@ var audioSource = document.querySelector('#gameplayAudio')
 //translator
 async function pageReturn() {
 	let response = await axios.get('../../JSON/French.json')
-	console.log(response.data.EN.title, "is this working?")
+	console.log("Database Active. Returning Test Value:", response.data.EN.title)
 	languageSwap(response)
 }
 pageReturn()
