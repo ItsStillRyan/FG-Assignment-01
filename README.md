@@ -154,6 +154,41 @@ ___
 Axios check - "Database Active, Returning test value:"
 
 Score check - Every time user clicks on the correct answer, "ScoreUp 1++"
+___
+### _Navigation Checks_
+#### Navigating through all possible navigation path in 3 seperate clusters:
+1. Menu Cluster
+    * Menu to Highscore and back
+    * Menu to Settings and back
+    * Menu to Select Operators
+2. Settings Cluster
+    * Setting to Menu and back
+    * Settings to Gameplay Pause and back
+3. Gameplay Cluster
+    * Select Operators to Gameplay 
+    * Gameplay to Pause and back
+    * Pause to Menu
+    * Gameplay to Times up Page (via time countdown)
+    * Times up Page to Game Over Page (via time countdown)
+    * Game Over Page to Gameplay
+    * Game Over Page to Highscore
+    * Game Over Page to Menu
+___
+### _Gameplay Logic Checks_
+#### Running 5 instances of each math operators:
+1. To test the reliability of the logic codes to display equations that make sense and the correct answer to each generated equation.
+2. To check whether there are any duplicates in the fake answer options.
+3. To check if the dub answers renders the game too easy or too difficult. 
+___
+### _Testing Cases_
+#### Testing difficulty of game by using an external party, in this case is a primary 2 student.
+_Playing on Addition Operator_
+* First Iteration:
+> "The numbers are too big, teacher only teach a little on big numbers"
+* Second Iteration after adjustment:
+> "It question is easier for me now, but the answers in the rocks are too far apart, it's too easy to spot which one is the correct answer"
+* Third and final Iteration:
+> "This is just nice for me. I can understand the question and the answers are not that easy now." 
 ***
 ## Technologies Used
 ___
