@@ -1,4 +1,4 @@
-![FGlogo](Images/README/clean-logo.png)
+![FGlogo](README-images/clean-logo.png)
 
 # A HTML5/CSS3 & Javascript based Project for Assignment 1
 ***
@@ -27,7 +27,7 @@ ___
 ### _Site Map_
 #### Intended navigation for the game
 
-![Site Map](Images/README/Structure.png)
+![Site Map](README-images/structure.png)
 
 ### **Main Menu Page**
 * Main logo
@@ -99,11 +99,11 @@ ___
 As I have chosen to do a game, I've decided that UI would take the highest priority. Setting aside the first week to decide and design the UI, I've preemptively layed out the skeleton structure with graphics with navigation arrows to properly envision the end product that I will be working towards to.
 
 ##### Mobile View
-![Site Map](Images/README/Skeleton1.png)
+![Site Map](README-images/skeleton1.png)
 ##### Tablet View
-![Site Map](Images/README/Skeleton2.png)
+![Site Map](README-images/skeleton2.png)
 ##### Desktop View
-![Site Map](Images/README/Skeleton3.png)
+![Site Map](README-images/skeleton3.png)
 ***
 
 
