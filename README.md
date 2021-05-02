@@ -17,6 +17,21 @@ What I, as the programmer, hope to achieve is to provide a product that is intui
 
 As the user, the goal is to use the product to improve their own skill set while retaining an interest and is able to rely on the product to provide noticable improvements, specifically in math.
 ***
+## **Strategy**
+___
+### Users:
+The direct users of this web application are elementary level children that are already being introduced into the 4 main mathematical operators. 
+
+Indirectly, this can be used by parents and/or teachers to gauge their children/students on their current skill level with basic mathematics and can plan ahead on the acadamic schedule to cater for areas that may be lacking.
+
+#### Goals:
+Direct users goals are to use this web application to develop their critical thinking, cognitive and logical skills that will further prepare them to fufill today's educational standards.
+
+Indirect users goals are to use this web application to aid them in teaching and guiding their children/students, veering away from traditional teaching methods to a more captivating and engaging method which ties in into the current era where children are familiar and exposed to mobile devices. 
+
+### Owner's Goal:
+Creating this web application to provide direct users a more engaging method to learn basic mathematics and to provide Indirect users a tool to aid them in teaching and gauging their teaching patterns and strategy.
+***
 ## Demo
 ___
 The live website can be access from this link:
