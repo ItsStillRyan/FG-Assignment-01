@@ -1,4 +1,4 @@
-![FGlogo](Images/README/Clean-logo.png)
+![FGlogo](Images/README/clean-logo.png)
 
 # A HTML5/CSS3 & Javascript based Project for Assignment 1
 ***

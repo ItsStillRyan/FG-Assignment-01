@@ -1,6 +1,6 @@
 {
     "FR":{
-        "title":"Images/French/main_title.png",
+        "title":"Images/French/main-title.png",
         "play_button":"Images/French/main-play.png",
         "operations_select":"Images/French/math-op.png",
         "back":"Images/French/back.png",
@@ -14,15 +14,15 @@
     },
     "EN":{
         "title": "Images/Menu/logo.png",
-        "play_button":"Images/Menu/main-PlayButton.png",
+        "play_button":"Images/Menu/main-playbtn.png",
         "operations_select":"Images/Menu/clouds-only.png",
-        "back":"Images/Menu/settings-BackButton.png",
-        "resume":"../../Images/Gameplay/pause-Resume.png",
-        "quit":"../../Images/Gameplay/pause-Quit.png",
+        "back":"Images/Menu/settings-backbtn.png",
+        "resume":"../../Images/Gameplay/pause-resume.png",
+        "quit":"../../Images/Gameplay/pause-quit.png",
         "times_up":"../../Images/Gameplay/timesup-logo.png",
-        "gameover":"../../Images/Gameplay/Gameover-board.png",
+        "gameover":"../../Images/Gameplay/gameover-board.png",
         "HS_board":"../Images/Highscore/scoreboard.png",
-        "HS_back":"../Images/Menu/settings-BackButton.png",
-        "gp_back":"../../Images/Menu/settings-BackButton.png"
+        "HS_back":"../Images/Menu/settings-backbtn.png",
+        "gp_back":"../../Images/Menu/settings-backbtn.png"
     }
 }

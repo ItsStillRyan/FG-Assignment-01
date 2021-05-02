@@ -133,7 +133,7 @@ body {
 	height: 55px;
 }
 .btn-box {
-	background-image: url(../../Images/Gameplay/Gameover-btnBG.png);
+	background-image: url(../../Images/Gameplay/gameover-btnBG.png);
 	background-repeat: no-repeat;
 	background-position: center;
 	width: 80vw;

@@ -3,7 +3,7 @@ var gameplayscreen = "url('../../Images/Gameplay/gameplay-BG.jpg')"
 var pausescreen = "url('../../Images/Gameplay/pause-BG.jpg')"
 var timesupscreen = "url('../../Images/Gameplay/timesup-BG.jpg')"
 var gameoverscreen = "url('../../Images/Menu/main-BG.jpg')"
-let settingsscreen = "url('../../Images/Menu/Settings-BG.jpg')"
+let settingsscreen = "url('../../Images/Menu/settings-BG.jpg')"
 
 function screenChange(BG) {
 	document.body.style.backgroundImage = BG

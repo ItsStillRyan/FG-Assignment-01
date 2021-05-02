@@ -1,4 +1,4 @@
-let settingsscreen = "url('Images/Menu/Settings-BG.jpg')"
+let settingsscreen = "url('Images/Menu/settings-BG.jpg')"
 let menuscreen = "url('Images/Menu/main-BG.jpg')"
 
 function screenChange(BG) {
